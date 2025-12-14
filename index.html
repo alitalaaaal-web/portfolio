@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ali Talal - Graphic Designer & Digital Marketer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/api/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Ali Talal - Professional Graphic Designer & Digital Marketer">
+    <meta name="keywords" content="graphic designer, digital marketer, branding, web design, UI/UX">
+    <meta name="author" content="Ali Talal">
     <style>
         /* ===== RESET & BASE STYLES ===== */
         * {
@@ -48,58 +51,6 @@
             overflow: hidden;
         }
 
-        /* DNA Helix */
-        .dna-container {
-            position: absolute;
-            top: 50%;
-            right: 10%;
-            width: 100px;
-            height: 300px;
-            transform: translateY(-50%);
-        }
-
-        .dna-helix {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        .dna-strand {
-            position: absolute;
-            width: 2px;
-            height: 100%;
-            background: var(--primary);
-            left: 50%;
-            transform: translateX(-50%);
-            opacity: 0.5;
-        }
-
-        .dna-strand:nth-child(2) {
-            left: calc(50% + 20px);
-        }
-
-        .dna-node {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            background: var(--primary);
-            border-radius: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: dnaFloat 3s ease-in-out infinite;
-            box-shadow: 0 0 10px var(--primary);
-        }
-
-        .dna-node:nth-child(2) {
-            left: calc(50% + 20px);
-        }
-
-        @keyframes dnaFloat {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(20px); }
-        }
-
-        /* Enhanced Stars */
         .star-layer {
             position: absolute;
             width: 100%;
@@ -112,7 +63,6 @@
             border-radius: 50%;
         }
 
-        /* Layer 1 - Close, bright, fast */
         .layer-1 .star {
             width: 2px;
             height: 2px;
@@ -120,7 +70,6 @@
             box-shadow: 0 0 8px white;
         }
 
-        /* Layer 2 - Medium, slower */
         .layer-2 .star {
             width: 1.5px;
             height: 1.5px;
@@ -128,7 +77,6 @@
             box-shadow: 0 0 6px white;
         }
 
-        /* Layer 3 - Far, slow */
         .layer-3 .star {
             width: 1px;
             height: 1px;
@@ -136,7 +84,6 @@
             box-shadow: 0 0 4px white;
         }
 
-        /* Layer 4 - Very far, very slow */
         .layer-4 .star {
             width: 0.8px;
             height: 0.8px;
@@ -168,7 +115,6 @@
             50% { opacity: 1; }
         }
 
-        /* Floating Particles */
         .particle {
             position: absolute;
             width: 4px;
@@ -268,6 +214,7 @@
             backdrop-filter: blur(10px);
             z-index: 1000;
             border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            transition: var(--transition);
         }
 
         .nav-container {
@@ -391,6 +338,10 @@
             color: var(--primary);
         }
 
+        .btn-outline:hover {
+            background: rgba(16, 185, 129, 0.1);
+        }
+
         .hero-image {
             flex: 1;
             text-align: center;
@@ -410,159 +361,142 @@
             animation: fadeInRight 1s 1s forwards;
         }
 
-        /* ===== TECH GRID SECTION (NEW) ===== */
-        #tech-grid {
+        /* ===== CREATIVE DNA SECTION ===== */
+        #creative-dna {
             background: rgba(2, 6, 23, 0.7);
             padding: 100px 0;
         }
 
-        .tech-grid-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .tech-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .tech-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .tech-header p {
-            font-size: 1.1rem;
-            color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        .dna-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
             gap: 40px;
-            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
-        .tech-column {
-            background: rgba(15, 23, 42, 0.8);
-            border-radius: 15px;
-            padding: 30px;
-            border: 1px solid rgba(148, 163, 184, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 2;
-        }
-
-        .tech-column:hover {
-            border-color: var(--primary);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(16, 185, 129, 0.2);
-        }
-
-        .column-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(148, 163, 184, 0.2);
-        }
-
-        .column-icon {
-            width: 40px;
-            height: 40px;
-            background: rgba(16, 185, 129, 0.2);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-            font-size: 1.2rem;
-        }
-
-        .column-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-
-        .tech-items {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .tech-item {
-            padding: 12px 15px;
-            background: rgba(30, 41, 59, 0.5);
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        /* DNA GRID - LEFT SIDE (EXACT SQUARE) */
+        .dna-left {
+            width: 500px;
+            height: 500px;
+            background: rgba(15, 23, 42, 0.9);
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid rgba(148, 163, 184, 0.2);
             position: relative;
             overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
 
-        .tech-item:hover {
-            background: rgba(16, 185, 129, 0.15);
-            transform: translateX(5px);
+        .dna-header {
+            margin-bottom: 15px;
+            text-align: center;
         }
 
-        .tech-item.active {
-            background: rgba(16, 185, 129, 0.2);
-            border-left: 3px solid var(--primary);
+        .dna-header h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 5px;
+            color: var(--primary);
         }
 
-        .tech-item-name {
-            font-weight: 600;
-            color: var(--light);
-        }
-
-        .tech-item-desc {
-            font-size: 0.9rem;
+        .dna-header p {
             color: var(--gray);
-            margin-top: 5px;
-            display: none;
+            font-size: 0.9rem;
         }
 
-        .tech-item:hover .tech-item-desc {
-            display: block;
+        /* CATEGORIES - FIXED FOR VISUAL DESIGN */
+        .dna-category {
+            margin-bottom: 15px;
         }
 
-        /* Connection Lines */
-        .connection-lines {
+        .category-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 8px;
+            padding-left: 5px;
+            border-left: 3px solid var(--primary);
+            padding-left: 10px;
+        }
+
+        /* SKILLS GRID */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .dna-bubble {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 50px;
+            padding: 10px 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            font-weight: 600;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* DYNAMIC BUBBLE SIZES */
+        .dna-bubble[data-length="short"] {
+            padding: 10px 12px;
+            font-size: 0.85rem;
+        }
+
+        .dna-bubble[data-length="medium"] {
+            padding: 11px 18px;
+            font-size: 0.9rem;
+        }
+
+        .dna-bubble[data-length="long"] {
+            padding: 12px 22px;
+            font-size: 0.85rem;
+        }
+
+        .dna-bubble:hover {
+            background: rgba(16, 185, 129, 0.15);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .dna-bubble.active {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: var(--primary);
+        }
+
+        /* CONNECTION LINES */
+        #connection-lines {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 1;
             pointer-events: none;
+            z-index: 1;
         }
 
         .connection-line {
-            position: absolute;
-            background: linear-gradient(90deg, var(--primary), transparent);
-            height: 2px;
-            transform-origin: left center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            stroke: #10B981;
+            stroke-width: 2;
+            stroke-dasharray: 5,3;
+            fill: none;
+            transition: all 0.3s ease;
         }
 
-        .connection-line.active {
-            opacity: 0.6;
-        }
-
-        /* Connection Points */
         .connection-point {
             position: absolute;
             width: 10px;
             height: 10px;
             background: var(--primary);
             border-radius: 50%;
-            z-index: 3;
+            transform: translate(-50%, -50%);
+            z-index: 2;
             opacity: 0;
             transition: opacity 0.3s ease;
             box-shadow: 0 0 10px var(--primary);
@@ -570,12 +504,35 @@
 
         .connection-point.active {
             opacity: 1;
-            animation: pulse 2s infinite;
+            animation: pulsePoint 1.5s infinite;
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
+        @keyframes pulsePoint {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.3); }
+        }
+
+        /* VIDEO SECTION - RIGHT SIDE (4:5 RATIO) - NO HEADING */
+        .dna-right {
+            width: 400px;
+            height: 500px;
+        }
+
+        .video-container {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            border: none;
+            background: transparent;
+        }
+
+        .video-player {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         /* ===== ABOUT SECTION ===== */
@@ -630,30 +587,53 @@
             transform: scaleX(1);
         }
 
-        /* ===== PROJECTS SECTION ===== */
+        /* ===== PROJECTS SECTION - HORIZONTAL CAROUSEL ===== */
         #projects {
             background: rgba(2, 6, 23, 0.6);
+            overflow: hidden;
+            position: relative;
         }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        .projects-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .projects-carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .projects-carousel-track {
+            display: flex;
             gap: 30px;
+            animation: scrollHorizontal 30s linear infinite;
+            padding: 10px 0;
         }
 
+        .projects-carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        /* PROJECT CARDS - 4:5 ASPECT RATIO */
         .project-card {
+            flex: 0 0 300px;
+            height: 375px;
             background: rgba(15, 23, 42, 0.8);
             border-radius: 15px;
             overflow: hidden;
             border: 1px solid rgba(148, 163, 184, 0.1);
             transition: var(--transition);
-            transform: translateY(50px);
             opacity: 0;
+            transform: translateY(20px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .project-card.animate {
-            transform: translateY(0);
             opacity: 1;
+            transform: translateY(0);
         }
 
         .project-card:hover {
@@ -664,7 +644,7 @@
 
         .project-img {
             width: 100%;
-            height: 200px;
+            height: 180px;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
@@ -674,29 +654,75 @@
         }
 
         .project-info {
-            padding: 25px;
+            padding: 20px;
+            height: calc(375px - 180px);
+            display: flex;
+            flex-direction: column;
         }
 
         .project-info h3 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 10px;
             color: var(--primary);
+        }
+
+        .project-info p {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 15px;
+            flex-grow: 1;
         }
 
         .project-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin: 15px 0;
+            gap: 8px;
+            margin: 10px 0;
         }
 
         .tag {
             background: rgba(16, 185, 129, 0.2);
             color: var(--primary);
-            padding: 5px 12px;
+            padding: 4px 10px;
             border-radius: 20px;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             font-weight: 600;
+        }
+
+        .project-btn {
+            margin-top: auto;
+        }
+
+        /* Horizontal scrolling animation */
+        @keyframes scrollHorizontal {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-300px * 7 - 30px * 7));
+            }
+        }
+
+        /* Carousel Navigation */
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(148, 163, 184, 0.3);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .carousel-dot.active {
+            background: var(--primary);
+            transform: scale(1.2);
         }
 
         /* ===== CONTACT SECTION ===== */
@@ -727,6 +753,7 @@
             margin-bottom: 1.5rem;
             opacity: 0;
             transform: translateX(-20px);
+            transition: all 0.5s ease;
         }
 
         .contact-item.animate {
@@ -744,6 +771,7 @@
             justify-content: center;
             color: white;
             font-size: 1.2rem;
+            flex-shrink: 0;
         }
 
         .contact-form input,
@@ -769,6 +797,7 @@
         .contact-form textarea {
             height: 150px;
             resize: vertical;
+            min-height: 100px;
         }
 
         /* ===== FOOTER ===== */
@@ -784,19 +813,21 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .social-links {
             display: flex;
-            gap: 20px;
+            gap: 15px;
         }
 
         .social-links a {
             color: var(--light);
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             transition: var(--transition);
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -841,36 +872,35 @@
         }
 
         /* ===== RESPONSIVE DESIGN ===== */
-        @media (max-width: 992px) {
-            h1 { font-size: 2.8rem; }
-            h2 { font-size: 2.2rem; }
-            
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .hero-text .subtitle { text-align: center; }
-            
-            .tech-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            
-            .about-content,
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .profile-img {
-                width: 350px;
-                height: 450px;
-            }
-            
+        @media (max-width: 1100px) {
             .dna-container {
-                right: 5%;
-                width: 80px;
-                height: 250px;
+                flex-direction: column;
+                align-items: center;
+                max-width: 500px;
+            }
+            
+            .dna-left {
+                width: 500px;
+                height: 500px;
+            }
+            
+            .dna-right {
+                width: 800px;
+                height: 825px;
+            }
+
+            .project-card {
+                flex: 0 0 280px;
+                height: 350px;
+            }
+
+            @keyframes scrollHorizontal {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-280px * 7 - 30px * 7));
+                }
             }
         }
 
@@ -902,30 +932,122 @@
                 display: flex;
             }
             
-            h1 { font-size: 2.3rem; }
-            h2 { font-size: 1.9rem; }
+            .mobile-menu a {
+                padding: 12px 20px;
+                border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+                transition: var(--transition);
+            }
             
-            .projects-grid {
+            .mobile-menu a:hover {
+                color: var(--primary);
+                background: rgba(16, 185, 129, 0.1);
+            }
+            
+            .dna-left, .dna-right {
+                width: 100%;
+                max-width: 400px;
+            }
+            
+            .dna-left {
+                height: 650px;
+            }
+            
+            .dna-right {
+                height: 700px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .about-content,
+            .contact-container {
                 grid-template-columns: 1fr;
             }
 
-            .profile-img {
-                width: 300px;
-                height: 400px;
+            /* Mobile Projects - Still horizontal but smaller */
+            .project-card {
+                flex: 0 0 250px;
+                height: 312px;
             }
-            
-            .dna-container {
-                display: none;
+
+            .project-img {
+                height: 150px;
+            }
+
+            .project-info {
+                height: calc(312px - 150px);
+                padding: 15px;
+            }
+
+            @keyframes scrollHorizontal {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-250px * 7 - 30px * 7));
+                }
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 780px) {
             section { padding: 70px 0; }
-            .hero-btns { flex-direction: column; }
-            .btn { width: 100%; text-align: center; }
+            
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
             .profile-img {
                 width: 280px;
-                height: 380px;
+                height: 350px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .dna-bubble {
+                font-size: 0.8rem;
+                padding: 8px 12px;
+            }
+            
+            .dna-left, .dna-right {
+                padding: 20px;
+            }
+
+            .project-card {
+                flex: 0 0 220px;
+                height: 275px;
+            }
+
+            .project-img {
+                height: 130px;
+            }
+
+            .project-info {
+                height: calc(275px - 130px);
+                padding: 12px;
+            }
+
+            .project-info h3 {
+                font-size: 1.1rem;
+            }
+
+            .project-info p {
+                font-size: 0.8rem;
+            }
+
+            @keyframes scrollHorizontal {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-220px * 7 - 30px * 7));
+                }
             }
         }
     </style>
@@ -933,22 +1055,10 @@
 <body>
     <!-- Advanced Animated Background -->
     <div id="background-effects">
-        <!-- DNA Helix -->
-        <div class="dna-container">
-            <div class="dna-helix">
-                <div class="dna-strand"></div>
-                <div class="dna-strand"></div>
-                <!-- DNA nodes will be added by JavaScript -->
-            </div>
-        </div>
-        
-        <!-- Star Layers -->
         <div class="star-layer layer-1"></div>
         <div class="star-layer layer-2"></div>
         <div class="star-layer layer-3"></div>
         <div class="star-layer layer-4"></div>
-        
-        <!-- Floating Particles -->
         <div class="particles-container"></div>
     </div>
 
@@ -959,20 +1069,20 @@
             
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
-                <li><a href="#tech-grid">Tech DNA</a></li>
+                <li><a href="#creative-dna">Creative DNA</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
         
         <div class="mobile-menu">
             <a href="#hero">Home</a>
-            <a href="#tech-grid">Tech DNA</a>
+            <a href="#creative-dna">Creative DNA</a>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
@@ -994,104 +1104,77 @@
             </div>
             
             <div class="hero-image">
-                <img src="pic1.jpg" alt="Ali Talal" class="profile-img" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80'">
+                <img src="pic1.jpg" alt="Ali Talal - Graphic Designer" class="profile-img" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80'" loading="lazy">
             </div>
         </div>
     </section>
 
-    <!-- Tech Grid Section (NEW - Added before About) -->
-    <section id="tech-grid">
-        <div class="tech-grid-container">
-            <div class="tech-header">
-                <h2>Creative DNA</h2>
-                <p>My expertise spans across design, marketing, and technology — connecting creative vision with technical execution.</p>
-            </div>
-            
-            <div class="tech-grid">
-                <!-- Connection Lines Container -->
-                <div class="connection-lines" id="connection-lines"></div>
-                
-                <!-- Column 1: Design -->
-                <div class="tech-column" id="design-column">
-                    <div class="column-header">
-                        <div class="column-icon">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <h3 class="column-title">DESIGN</h3>
+    <!-- Creative DNA Section -->
+    <section id="creative-dna">
+        <div class="container">
+            <h2>My Creative DNA</h2>
+            <div class="dna-container">
+                <!-- LEFT: DNA Grid (Exact Square) -->
+                <div class="dna-left" id="dna-grid-container">
+                    <div class="dna-header">
+                        <h2>Creative Skills</h2>
+                        <p>Click on any skill to see connections</p>
                     </div>
-                    <div class="tech-items">
-                        <div class="tech-item" data-id="1" data-column="design">
-                            <div class="tech-item-name">Adobe Creative Suite</div>
-                            <div class="tech-item-desc">Photoshop, Illustrator, InDesign, After Effects</div>
+                    
+                    <!-- Categories with Skills -->
+                    <div class="dna-categories">
+                        <!-- Design Tools -->
+                        <div class="dna-category">
+                            <div class="category-title">Design Tools</div>
+                            <div class="skills-grid">
+                                <div class="dna-bubble" data-id="1" data-skill="Photoshop" data-length="medium">Photoshop</div>
+                                <div class="dna-bubble" data-id="2" data-skill="Illustrator" data-length="medium">Illustrator</div>
+                            </div>
                         </div>
-                        <div class="tech-item" data-id="2" data-column="design">
-                            <div class="tech-item-name">UI/UX Design</div>
-                            <div class="tech-item-desc">Figma, Sketch, Prototyping, User Research</div>
+                        
+                        <!-- Branding & Strategy -->
+                        <div class="dna-category">
+                            <div class="category-title">Branding & Strategy</div>
+                            <div class="skills-grid">
+                                <div class="dna-bubble" data-id="3" data-skill="Branding" data-length="short">Branding</div>
+                                <div class="dna-bubble" data-id="4" data-skill="Marketing" data-length="short">Marketing</div>
+                                <div class="dna-bubble" data-id="5" data-skill="Copywriting" data-length="long">Copywriting</div>
+                                <div class="dna-bubble" data-id="6" data-skill="Logo Design" data-length="medium">Logo Design</div>
+                            </div>
                         </div>
-                        <div class="tech-item" data-id="3" data-column="design">
-                            <div class="tech-item-name">Brand Identity</div>
-                            <div class="tech-item-desc">Logo Design, Brand Guidelines, Visual Systems</div>
+                        
+                        <!-- Digital Marketing -->
+                        <div class="dna-category">
+                            <div class="category-title">Digital Marketing</div>
+                            <div class="skills-grid">
+                                <div class="dna-bubble" data-id="7" data-skill="Meta Ads" data-length="short">Meta Ads</div>
+                                <div class="dna-bubble" data-id="8" data-skill="Audience Targeting" data-length="long">Audience Targeting</div>
+                                <div class="dna-bubble" data-id="9" data-skill="UI/UX Design" data-length="medium">UI/UX Design</div>
+                            </div>
                         </div>
-                        <div class="tech-item" data-id="4" data-column="design">
-                            <div class="tech-item-name">Motion Graphics</div>
-                            <div class="tech-item-desc">After Effects, Premiere Pro, Animation</div>
+                        
+                        <!-- Visual Design -->
+                        <div class="dna-category">
+                            <div class="category-title">Visual Design</div>
+                            <div class="skills-grid">
+                                <div class="dna-bubble" data-id="10" data-skill="Typography" data-length="long">Typography</div>
+                                <div class="dna-bubble" data-id="11" data-skill="Color Theory" data-length="medium">Color Theory</div>
+                                <div class="dna-bubble" data-id="12" data-skill="Layout Design" data-length="medium">Layout Design</div>
+                            </div>
                         </div>
                     </div>
+                    
+                    <!-- Connection lines container -->
+                    <div id="connection-lines"></div>
                 </div>
                 
-                <!-- Column 2: Marketing -->
-                <div class="tech-column" id="marketing-column">
-                    <div class="column-header">
-                        <div class="column-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 class="column-title">MARKETING</h3>
-                    </div>
-                    <div class="tech-items">
-                        <div class="tech-item" data-id="5" data-column="marketing">
-                            <div class="tech-item-name">Digital Strategy</div>
-                            <div class="tech-item-desc">Campaign Planning, Analytics, ROI Optimization</div>
-                        </div>
-                        <div class="tech-item" data-id="6" data-column="marketing">
-                            <div class="tech-item-name">Social Media</div>
-                            <div class="tech-item-desc">Content Creation, Community Management, Ads</div>
-                        </div>
-                        <div class="tech-item" data-id="7" data-column="marketing">
-                            <div class="tech-item-name">SEO & Analytics</div>
-                            <div class="tech-item-desc">Google Analytics, SEMrush, Keyword Research</div>
-                        </div>
-                        <div class="tech-item" data-id="8" data-column="marketing">
-                            <div class="tech-item-name">Content Marketing</div>
-                            <div class="tech-item-desc">Blogging, Video Content, Email Marketing</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Column 3: Technology -->
-                <div class="tech-column" id="tech-column">
-                    <div class="column-header">
-                        <div class="column-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3 class="column-title">TECHNOLOGY</h3>
-                    </div>
-                    <div class="tech-items">
-                        <div class="tech-item" data-id="9" data-column="tech">
-                            <div class="tech-item-name">Web Development</div>
-                            <div class="tech-item-desc">HTML5, CSS3, JavaScript, Responsive Design</div>
-                        </div>
-                        <div class="tech-item" data-id="10" data-column="tech">
-                            <div class="tech-item-name">CMS Platforms</div>
-                            <div class="tech-item-desc">WordPress, Shopify, Webflow, Squarespace</div>
-                        </div>
-                        <div class="tech-item" data-id="11" data-column="tech">
-                            <div class="tech-item-name">Design Tools</div>
-                            <div class="tech-item-desc">Framer, Webflow, Three.js, GSAP</div>
-                        </div>
-                        <div class="tech-item" data-id="12" data-column="tech">
-                            <div class="tech-item-name">Analytics Tools</div>
-                            <div class="tech-item-desc">Hotjar, Google Optimize, A/B Testing</div>
-                        </div>
+                <!-- RIGHT: Video Course (4:5 Ratio) - NO HEADING -->
+                <div class="dna-right">
+                    <div class="video-container">
+                        <video class="video-player" controls poster="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
+                            <source src="vid1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </div>
@@ -1142,58 +1225,136 @@
                 </div>
                 
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Design Workspace" style="width:100%; border-radius:15px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Design Workspace" style="width:100%; border-radius:15px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section - HORIZONTAL CAROUSEL -->
     <section id="projects">
         <div class="container">
-            <h2>My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1064&q=80" alt="Brand Identity Project" class="project-img">
-                    <div class="project-info">
-                        <h3>EcoLife Brand Identity</h3>
-                        <p>Complete brand identity design for an eco-friendly products company, including logo, packaging, and marketing materials.</p>
-                        <div class="project-tags">
-                            <span class="tag">Logo Design</span>
-                            <span class="tag">Branding</span>
-                            <span class="tag">Packaging</span>
+            <div class="projects-header">
+                <h2>My Projects</h2>
+                <p style="color: var(--gray); margin-top: 10px;">Scroll horizontally to view more projects</p>
+            </div>
+            
+            <div class="projects-carousel-container">
+                <div class="projects-carousel-track" id="projectsCarousel">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1064&q=80" alt="Brand Identity Project" class="project-img" loading="lazy">
+                        <div class="project-info">
+                            <h3>EcoLife Brand Identity</h3>
+                            <p>Complete brand identity design for an eco-friendly products company, including logo, packaging, and marketing materials.</p>
+                            <div class="project-tags">
+                                <span class="tag">Logo Design</span>
+                                <span class="tag">Branding</span>
+                                <span class="tag">Packaging</span>
+                            </div>
+                            <a href="#" class="btn project-btn">View Project</a>
                         </div>
-                        <a href="#" class="btn">View Project</a>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1115&q=80" alt="Digital Marketing Campaign" class="project-img" loading="lazy">
+                        <div class="project-info">
+                            <h3>TechGadgets Social Campaign</h3>
+                            <p>Digital marketing campaign that increased social media engagement by 300% and drove 50% more website traffic.</p>
+                            <div class="project-tags">
+                                <span class="tag">Social Media</span>
+                                <span class="tag">Digital Marketing</span>
+                                <span class="tag">Content Strategy</span>
+                            </div>
+                            <a href="#" class="btn project-btn">View Project</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1558655146-364adaf1fcc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Website Redesign" class="project-img" loading="lazy">
+                        <div class="project-info">
+                            <h3>Foodies Website Redesign</h3>
+                            <p>Complete UI/UX redesign for a food delivery service website, resulting in 40% increase in user conversions.</p>
+                            <div class="project-tags">
+                                <span class="tag">UI/UX Design</span>
+                                <span class="tag">Web Design</span>
+                                <span class="tag">Prototyping</span>
+                            </div>
+                            <a href="#" class="btn project-btn">View Project</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Mobile App Design" class="project-img" loading="lazy">
+                        <div class="project-info">
+                            <h3>Fitness App UI Design</h3>
+                            <p>Modern mobile app design for a fitness tracking application with personalized workout plans and progress tracking.</p>
+                            <div class="project-tags">
+                                <span class="tag">App Design</span>
+                                <span class="tag">UI/UX</span>
+                                <span class="tag">Mobile</span>
+                            </div>
+                            <a href="#" class="btn project-btn">View Project</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Product Packaging" class="project-img" loading="lazy">
+                        <div class="project-info">
+                            <h3>Organic Tea Packaging</h3>
+                            <p>Eco-friendly packaging design for an organic tea brand, focusing on sustainability and premium visual appeal.</p>
+                            <div class="project-tags">
+                                <span class="tag">Packaging</span>
+                                <span class="tag">Product Design</span>
+                                <span class="tag">Sustainability</span>
+                            </div>
+                            <a href="#" class="btn project-btn">View Project</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 6 -->
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Social Media Graphics" class="project-img" loading="lazy">
+                        <div class="project-info">
+                            <h3>Social Media Brand Kit</h3>
+                            <p>Complete social media graphics package including templates, stories, and banners for consistent brand presence.</p>
+                            <div class="project-tags">
+                                <span class="tag">Social Media</span>
+                                <span class="tag">Graphics</span>
+                                <span class="tag">Templates</span>
+                            </div>
+                            <a href="#" class="btn project-btn">View Project</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 7 (Duplicate for infinite scroll effect) -->
+                    <div class="project-card">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1064&q=80" alt="Brand Identity Project" class="project-img" loading="lazy">
+                        <div class="project-info">
+                            <h3>EcoLife Brand Identity</h3>
+                            <p>Complete brand identity design for an eco-friendly products company, including logo, packaging, and marketing materials.</p>
+                            <div class="project-tags">
+                                <span class="tag">Logo Design</span>
+                                <span class="tag">Branding</span>
+                                <span class="tag">Packaging</span>
+                            </div>
+                            <a href="#" class="btn project-btn">View Project</a>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1115&q=80" alt="Digital Marketing Campaign" class="project-img">
-                    <div class="project-info">
-                        <h3>TechGadgets Social Campaign</h3>
-                        <p>Digital marketing campaign that increased social media engagement by 300% and drove 50% more website traffic.</p>
-                        <div class="project-tags">
-                            <span class="tag">Social Media</span>
-                            <span class="tag">Digital Marketing</span>
-                            <span class="tag">Content Strategy</span>
-                        </div>
-                        <a href="#" class="btn">View Project</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1558655146-364adaf1fcc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Website Redesign" class="project-img">
-                    <div class="project-info">
-                        <h3>Foodies Website Redesign</h3>
-                        <p>Complete UI/UX redesign for a food delivery service website, resulting in 40% increase in user conversions.</p>
-                        <div class="project-tags">
-                            <span class="tag">UI/UX Design</span>
-                            <span class="tag">Web Design</span>
-                            <span class="tag">Prototyping</span>
-                        </div>
-                        <a href="#" class="btn">View Project</a>
-                    </div>
-                </div>
+            </div>
+            
+            <div class="carousel-nav">
+                <div class="carousel-dot active" data-index="0"></div>
+                <div class="carousel-dot" data-index="1"></div>
+                <div class="carousel-dot" data-index="2"></div>
+                <div class="carousel-dot" data-index="3"></div>
+                <div class="carousel-dot" data-index="4"></div>
+                <div class="carousel-dot" data-index="5"></div>
             </div>
         </div>
     </section>
@@ -1260,16 +1421,16 @@
                 <div class="logo">Ali<span>Talal</span></div>
                 
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-behance"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                    <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Ali Talal. All rights reserved.</p>
+                <p>&copy; 2023 Ali Talal. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> by Ali Talal</p>
             </div>
         </div>
     </footer>
@@ -1305,31 +1466,6 @@
             });
         }
 
-        // Create DNA helix
-        function createDNAHelix() {
-            const dnaHelix = document.querySelector('.dna-helix');
-            const nodeCount = 15;
-            
-            for (let i = 0; i < nodeCount; i++) {
-                const node1 = document.createElement('div');
-                const node2 = document.createElement('div');
-                
-                node1.classList.add('dna-node');
-                node2.classList.add('dna-node');
-                
-                const position = (i / (nodeCount - 1)) * 100;
-                node1.style.top = `${position}%`;
-                node2.style.top = `${position}%`;
-                
-                const delay = i * 0.2;
-                node1.style.animationDelay = `${delay}s`;
-                node2.style.animationDelay = `${delay}s`;
-                
-                dnaHelix.appendChild(node1);
-                dnaHelix.appendChild(node2);
-            }
-        }
-
         // Create floating particles
         function createParticles() {
             const container = document.querySelector('.particles-container');
@@ -1359,14 +1495,13 @@
             }
         }
 
-        // Tech Grid Connection System
-        class TechGridConnections {
+        // Creative DNA Connections System
+        class CreativeDNA {
             constructor() {
-                this.techItems = document.querySelectorAll('.tech-item');
-                this.connectionLines = document.getElementById('connection-lines');
-                this.activeItem = null;
+                this.bubbles = document.querySelectorAll('.dna-bubble');
+                this.connectionsContainer = document.getElementById('connection-lines');
+                this.activeBubble = null;
                 this.connections = [];
-                this.connectionPoints = [];
                 
                 this.init();
             }
@@ -1374,164 +1509,299 @@
             init() {
                 this.createConnections();
                 this.setupEventListeners();
-                this.createInitialConnections();
+                this.setupBubbleSizes();
             }
             
             createConnections() {
-                // Define connections between items (from item id to item id)
                 this.connections = [
-                    { from: 1, to: 5 },  // Adobe Suite -> Digital Strategy
-                    { from: 2, to: 6 },  // UI/UX -> Social Media
-                    { from: 3, to: 7 },  // Brand Identity -> SEO
-                    { from: 4, to: 8 },  // Motion Graphics -> Content Marketing
-                    { from: 5, to: 9 },  // Digital Strategy -> Web Dev
-                    { from: 6, to: 10 }, // Social Media -> CMS
-                    { from: 7, to: 11 }, // SEO -> Design Tools
-                    { from: 8, to: 12 }, // Content Marketing -> Analytics
-                    { from: 1, to: 10 }, // Adobe Suite -> CMS
-                    { from: 3, to: 11 }, // Brand Identity -> Design Tools
+                    { from: 1, to: 2, label: "Design Suite" },
+                    { from: 1, to: 6, label: "Logo Design" },
+                    { from: 1, to: 12, label: "Layout" },
+                    { from: 2, to: 10, label: "Typography" },
+                    { from: 2, to: 11, label: "Color" },
+                    { from: 3, to: 4, label: "Strategy" },
+                    { from: 3, to: 6, label: "Identity" },
+                    { from: 4, to: 5, label: "Content" },
+                    { from: 4, to: 7, label: "Digital" },
+                    { from: 5, to: 7, label: "Ads" },
+                    { from: 5, to: 8, label: "Targeting" },
+                    { from: 9, to: 10, label: "Type" },
+                    { from: 9, to: 11, label: "Colors" },
+                    { from: 9, to: 12, label: "Layout" },
                 ];
             }
             
             setupEventListeners() {
-                this.techItems.forEach(item => {
-                    item.addEventListener('mouseenter', (e) => {
-                        this.handleItemHover(e.target);
+                this.bubbles.forEach(bubble => {
+                    bubble.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        this.handleBubbleClick(bubble);
                     });
-                    
-                    item.addEventListener('mouseleave', () => {
-                        this.handleItemLeave();
-                    });
+                });
+                
+                document.addEventListener('click', () => {
+                    this.clearAllConnections();
+                });
+                
+                this.connectionsContainer.addEventListener('click', (e) => {
+                    e.stopPropagation();
                 });
             }
             
-            handleItemHover(item) {
-                // Remove active class from all items
-                this.techItems.forEach(i => i.classList.remove('active'));
-                
-                // Add active class to hovered item
-                item.classList.add('active');
-                
-                // Get item ID
-                const itemId = parseInt(item.dataset.id);
-                this.activeItem = itemId;
-                
-                // Clear existing lines and points
-                this.clearConnections();
-                
-                // Show connections for this item
-                this.showConnections(itemId);
-                
-                // Create connection point on hovered item
-                this.createConnectionPoint(item, true);
+            setupBubbleSizes() {
+                this.bubbles.forEach(bubble => {
+                    const text = bubble.textContent.trim();
+                    const length = text.length;
+                    
+                    if (length <= 8) {
+                        bubble.setAttribute('data-length', 'short');
+                    } else if (length <= 12) {
+                        bubble.setAttribute('data-length', 'medium');
+                    } else {
+                        bubble.setAttribute('data-length', 'long');
+                    }
+                });
             }
             
-            handleItemLeave() {
-                // Remove active class from all items
-                this.techItems.forEach(i => i.classList.remove('active'));
+            handleBubbleClick(bubble) {
+                const bubbleId = parseInt(bubble.dataset.id);
                 
-                // Clear connections
-                this.clearConnections();
+                if (this.activeBubble === bubbleId) {
+                    this.clearAllConnections();
+                    return;
+                }
                 
-                // Recreate initial connections
-                this.createInitialConnections();
+                this.clearAllConnections();
+                this.activeBubble = bubbleId;
+                this.showConnections(bubbleId);
             }
             
-            showConnections(itemId) {
-                // Find all connections involving this item
+            showConnections(bubbleId) {
+                const activeBubble = document.querySelector(`.dna-bubble[data-id="${bubbleId}"]`);
+                if (activeBubble) {
+                    activeBubble.classList.add('active');
+                }
+                
                 const relatedConnections = this.connections.filter(
-                    conn => conn.from === itemId || conn.to === itemId
+                    conn => conn.from === bubbleId || conn.to === bubbleId
                 );
                 
                 relatedConnections.forEach(conn => {
-                    const fromItem = document.querySelector(`.tech-item[data-id="${conn.from}"]`);
-                    const toItem = document.querySelector(`.tech-item[data-id="${conn.to}"]`);
+                    const fromBubble = document.querySelector(`.dna-bubble[data-id="${conn.from}"]`);
+                    const toBubble = document.querySelector(`.dna-bubble[data-id="${conn.to}"]`);
                     
-                    if (fromItem && toItem) {
-                        this.drawConnectionLine(fromItem, toItem);
-                        this.createConnectionPoint(fromItem, conn.from === itemId);
-                        this.createConnectionPoint(toItem, conn.to === itemId);
+                    if (fromBubble && toBubble) {
+                        this.drawConnection(fromBubble, toBubble, conn.label);
+                        
+                        if (conn.from === bubbleId) {
+                            toBubble.classList.add('active');
+                        } else {
+                            fromBubble.classList.add('active');
+                        }
                     }
                 });
             }
             
-            createInitialConnections() {
-                // Draw a few initial subtle connections
-                const initialConnections = [
-                    { from: 1, to: 5 },
-                    { from: 2, to: 6 },
-                    { from: 3, to: 7 }
-                ];
+            drawConnection(fromBubble, toBubble, label) {
+                const fromRect = fromBubble.getBoundingClientRect();
+                const toRect = toBubble.getBoundingClientRect();
+                const containerRect = this.connectionsContainer.getBoundingClientRect();
                 
-                initialConnections.forEach(conn => {
-                    const fromItem = document.querySelector(`.tech-item[data-id="${conn.from}"]`);
-                    const toItem = document.querySelector(`.tech-item[data-id="${conn.to}"]`);
-                    
-                    if (fromItem && toItem) {
-                        this.drawConnectionLine(fromItem, toItem, true);
-                    }
-                });
-            }
-            
-            drawConnectionLine(fromElement, toElement, isInitial = false) {
-                const fromRect = fromElement.getBoundingClientRect();
-                const toRect = toElement.getBoundingClientRect();
-                const containerRect = this.connectionLines.getBoundingClientRect();
-                
-                // Calculate positions relative to container
                 const fromX = fromRect.left + fromRect.width / 2 - containerRect.left;
                 const fromY = fromRect.top + fromRect.height / 2 - containerRect.top;
                 const toX = toRect.left + toRect.width / 2 - containerRect.left;
                 const toY = toRect.top + toRect.height / 2 - containerRect.top;
                 
-                // Calculate distance and angle
-                const dx = toX - fromX;
-                const dy = toY - fromY;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-                const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+                const svgNS = "http://www.w3.org/2000/svg";
+                const svg = document.createElementNS(svgNS, "svg");
+                svg.setAttribute("width", "100%");
+                svg.setAttribute("height", "100%");
+                svg.style.position = "absolute";
+                svg.style.top = "0";
+                svg.style.left = "0";
+                svg.style.pointerEvents = "none";
+                svg.style.zIndex = "1";
                 
-                // Create line element
-                const line = document.createElement('div');
-                line.className = 'connection-line';
-                if (isInitial) line.classList.add('initial');
-                line.style.width = `${distance}px`;
-                line.style.left = `${fromX}px`;
-                line.style.top = `${fromY}px`;
-                line.style.transform = `rotate(${angle}deg)`;
-                line.style.opacity = isInitial ? '0.2' : '0.6';
+                const path = document.createElementNS(svgNS, "path");
+                const midX = (fromX + toX) / 2;
+                const midY = (fromY + toY) / 2;
                 
-                this.connectionLines.appendChild(line);
+                const controlX = midX + (toY - fromY) * 0.3;
+                const controlY = midY + (fromX - toX) * 0.3;
                 
-                // Animate line drawing
+                path.setAttribute("d", 
+                    `M ${fromX},${fromY} Q ${controlX},${controlY} ${toX},${toY}`
+                );
+                path.setAttribute("fill", "none");
+                path.setAttribute("stroke", "#10B981");
+                path.setAttribute("stroke-width", "2");
+                path.setAttribute("stroke-dasharray", "5,3");
+                path.classList.add("connection-line");
+                
+                const length = path.getTotalLength();
+                path.style.strokeDasharray = length + ' ' + length;
+                path.style.strokeDashoffset = length;
+                
+                svg.appendChild(path);
+                this.connectionsContainer.appendChild(svg);
+                
                 setTimeout(() => {
-                    line.classList.add('active');
+                    path.style.transition = "stroke-dashoffset 0.8s ease";
+                    path.style.strokeDashoffset = '0';
                 }, 10);
+                
+                this.createConnectionPoint(fromX, fromY);
+                this.createConnectionPoint(toX, toY);
+                
+                const text = document.createElementNS(svgNS, "text");
+                const labelX = (fromX + controlX + toX) / 3;
+                const labelY = (fromY + controlY + toY) / 3;
+                
+                text.setAttribute("x", labelX);
+                text.setAttribute("y", labelY);
+                text.setAttribute("text-anchor", "middle");
+                text.setAttribute("fill", "#10B981");
+                text.setAttribute("font-size", "10");
+                text.setAttribute("font-weight", "600");
+                text.setAttribute("dy", "4");
+                text.textContent = label;
+                svg.appendChild(text);
             }
             
-            createConnectionPoint(element, isActive) {
-                const rect = element.getBoundingClientRect();
-                const containerRect = this.connectionLines.getBoundingClientRect();
-                
+            createConnectionPoint(x, y) {
                 const point = document.createElement('div');
-                point.className = 'connection-point';
-                if (isActive) point.classList.add('active');
-                
-                point.style.left = `${rect.left + rect.width / 2 - containerRect.left - 5}px`;
-                point.style.top = `${rect.top + rect.height / 2 - containerRect.top - 5}px`;
-                
-                this.connectionLines.appendChild(point);
-                this.connectionPoints.push(point);
+                point.className = 'connection-point active';
+                point.style.left = `${x}px`;
+                point.style.top = `${y}px`;
+                this.connectionsContainer.appendChild(point);
             }
             
-            clearConnections() {
-                // Remove all lines and points
-                const lines = this.connectionLines.querySelectorAll('.connection-line');
-                const points = this.connectionLines.querySelectorAll('.connection-point');
+            clearAllConnections() {
+                this.activeBubble = null;
+                this.bubbles.forEach(b => b.classList.remove('active'));
+                
+                const lines = this.connectionsContainer.querySelectorAll('svg');
+                const points = this.connectionsContainer.querySelectorAll('.connection-point');
                 
                 lines.forEach(line => line.remove());
                 points.forEach(point => point.remove());
+            }
+        }
+
+        // Projects Carousel System
+        class ProjectsCarousel {
+            constructor() {
+                this.carouselTrack = document.getElementById('projectsCarousel');
+                this.dots = document.querySelectorAll('.carousel-dot');
+                this.currentIndex = 0;
+                this.totalProjects = 6; // Actual projects (excluding duplicate)
+                this.isPaused = false;
                 
-                this.connectionPoints = [];
+                this.init();
+            }
+            
+            init() {
+                this.setupEventListeners();
+                this.updateDots();
+                this.setupAutoScroll();
+            }
+            
+            setupEventListeners() {
+                // Pause on hover
+                this.carouselTrack.addEventListener('mouseenter', () => {
+                    this.isPaused = true;
+                    this.carouselTrack.style.animationPlayState = 'paused';
+                });
+                
+                this.carouselTrack.addEventListener('mouseleave', () => {
+                    this.isPaused = false;
+                    this.carouselTrack.style.animationPlayState = 'running';
+                });
+                
+                // Dot navigation
+                this.dots.forEach(dot => {
+                    dot.addEventListener('click', () => {
+                        const index = parseInt(dot.getAttribute('data-index'));
+                        this.goToProject(index);
+                    });
+                });
+                
+                // Touch swipe for mobile
+                this.setupTouchEvents();
+            }
+            
+            setupTouchEvents() {
+                let startX = 0;
+                let endX = 0;
+                
+                this.carouselTrack.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+                
+                this.carouselTrack.addEventListener('touchmove', (e) => {
+                    endX = e.touches[0].clientX;
+                });
+                
+                this.carouselTrack.addEventListener('touchend', () => {
+                    const diff = startX - endX;
+                    
+                    if (Math.abs(diff) > 50) { // Minimum swipe distance
+                        if (diff > 0) {
+                            this.nextProject(); // Swipe left
+                        } else {
+                            this.prevProject(); // Swipe right
+                        }
+                    }
+                });
+            }
+            
+            setupAutoScroll() {
+                // Reset animation when it completes (infinite loop)
+                this.carouselTrack.addEventListener('animationiteration', () => {
+                    this.currentIndex = (this.currentIndex + 1) % this.totalProjects;
+                    this.updateDots();
+                });
+            }
+            
+            goToProject(index) {
+                this.currentIndex = index;
+                this.updateDots();
+                
+                // Calculate scroll position
+                const cardWidth = 300; // Adjust based on actual card width
+                const gap = 30;
+                const scrollPosition = index * (cardWidth + gap);
+                
+                // Smooth scroll to project
+                this.carouselTrack.style.transition = 'transform 0.5s ease';
+                this.carouselTrack.style.transform = `translateX(-${scrollPosition}px)`;
+                
+                // Reset animation after manual navigation
+                setTimeout(() => {
+                    this.carouselTrack.style.transition = '';
+                    this.carouselTrack.style.transform = '';
+                    this.carouselTrack.style.animationPlayState = this.isPaused ? 'paused' : 'running';
+                }, 500);
+            }
+            
+            nextProject() {
+                const nextIndex = (this.currentIndex + 1) % this.totalProjects;
+                this.goToProject(nextIndex);
+            }
+            
+            prevProject() {
+                const prevIndex = (this.currentIndex - 1 + this.totalProjects) % this.totalProjects;
+                this.goToProject(prevIndex);
+            }
+            
+            updateDots() {
+                this.dots.forEach((dot, index) => {
+                    if (index === this.currentIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
             }
         }
 
@@ -1539,33 +1809,39 @@
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const mobileMenu = document.querySelector('.mobile-menu');
         
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (mobileMenu.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
             });
-        });
+            
+            document.querySelectorAll('.mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                    mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                });
+            });
+        }
 
         // Section Animation Observer
         const sectionObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const sectionId = entry.target.id;
-                    
-                    // Reset animations for this section
                     resetSectionAnimations(sectionId);
-                    
-                    // Trigger animations for this section
                     triggerSectionAnimations(sectionId);
                 }
             });
         }, { threshold: 0.3 });
 
-        // Observe all sections
         document.querySelectorAll('section').forEach(section => {
             sectionObserver.observe(section);
         });
@@ -1597,7 +1873,7 @@
                 document.querySelectorAll('.project-card').forEach((card, index) => {
                     setTimeout(() => {
                         card.classList.add('animate');
-                    }, index * 200);
+                    }, index * 100);
                 });
             } else if (sectionId === 'about') {
                 setTimeout(() => {
@@ -1617,36 +1893,94 @@
 
         // Form submission
         const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        });
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const inputs = this.querySelectorAll('input, textarea');
+                let isValid = true;
+                
+                inputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        isValid = false;
+                        input.style.borderColor = '#ff6b6b';
+                    } else {
+                        input.style.borderColor = '';
+                    }
+                });
+                
+                if (isValid) {
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.textContent;
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                    submitBtn.disabled = true;
+                    submitBtn.style.background = '#059669';
+                    
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        submitBtn.style.background = '';
+                        this.reset();
+                    }, 3000);
+                }
+            });
+        }
 
         // Navbar scroll effect
+        let scrollTimeout;
         window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.padding = '15px 0';
-                nav.style.background = 'rgba(15, 23, 42, 0.95)';
-            } else {
-                nav.style.padding = '20px 0';
-                nav.style.background = 'rgba(15, 23, 42, 0.9)';
-            }
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const nav = document.querySelector('nav');
+                if (window.scrollY > 100) {
+                    nav.style.padding = '15px 0';
+                    nav.style.background = 'rgba(15, 23, 42, 0.95)';
+                } else {
+                    nav.style.padding = '20px 0';
+                    nav.style.background = 'rgba(15, 23, 42, 0.9)';
+                }
+            }, 10);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
 
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             createEnhancedStars();
-            createDNAHelix();
             createParticles();
-            
-            // Initialize tech grid connections
-            new TechGridConnections();
-            
-            // Trigger initial animations for hero section
+            new CreativeDNA();
+            new ProjectsCarousel();
             triggerSectionAnimations('hero');
         });
+
+        // Handle image loading errors
+        document.addEventListener('error', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.target.style.opacity = '0.7';
+                e.target.style.filter = 'grayscale(1)';
+            }
+        }, true);
     </script>
 </body>
 </html>
