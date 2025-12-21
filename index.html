@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Talal - Graphic Designer & Digital Marketer</title>
+    <title>Ali Talal - Content Creator|| Digital Marketer & Graphic Designer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="description" content="Ali Talal - Professional Graphic Designer & Digital Marketer">
     <meta name="keywords" content="graphic designer, digital marketer, branding, web design, UI/UX">
@@ -276,13 +276,13 @@
             cursor: pointer;
         }
 
-        /* ===== HERO SECTION ===== */
+        /* ===== HERO SECTION - MOBILE FIXED ===== */
         #hero {
             padding-top: 150px;
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(to bottom, rgba(2, 6, 23, 0.7), rgba(15, 23, 42, 0.8));
+            background: linear-gradient(to bottom, rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.7));
         }
 
         .hero-content {
@@ -376,10 +376,9 @@
             margin: 0 auto;
         }
 
-        /* DNA GRID - LEFT SIDE (EXACT SQUARE) */
         .dna-left {
             width: 500px;
-            height: 500px;
+            height: 580px;
             background: rgba(15, 23, 42, 0.9);
             border-radius: 20px;
             padding: 25px;
@@ -390,14 +389,14 @@
         }
 
         .dna-header {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-align: center;
         }
 
         .dna-header h2 {
-            font-size: 2.2rem;
+            font-size: 2rem;
             text-align: center;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             color: var(--primary);
         }
 
@@ -406,22 +405,19 @@
             font-size: 0.9rem;
         }
 
-        /* CATEGORIES - FIXED FOR VISUAL DESIGN */
         .dna-category {
-            margin-bottom: 15px;
+            margin-bottom: 25px;
         }
 
         .category-title {
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: 600;
             color: var(--primary);
-            margin-bottom: 8px;
-            padding-left: 5px;
-            border-left: 3px solid var(--primary);
+            margin-bottom: 12px;
             padding-left: 10px;
+            border-left: 3px solid var(--primary);
         }
 
-        /* SKILLS GRID */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -431,32 +427,20 @@
         .dna-bubble {
             background: rgba(30, 41, 59, 0.8);
             border-radius: 50px;
-            padding: 10px 15px;
+            padding: 10px 12px;
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
             border: 2px solid transparent;
             font-weight: 600;
-            font-size: 0.9rem;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        /* DYNAMIC BUBBLE SIZES */
-        .dna-bubble[data-length="short"] {
-            padding: 10px 12px;
             font-size: 0.85rem;
-        }
-
-        .dna-bubble[data-length="medium"] {
-            padding: 11px 18px;
-            font-size: 0.9rem;
-        }
-
-        .dna-bubble[data-length="long"] {
-            padding: 12px 22px;
-            font-size: 0.85rem;
+            white-space: normal;
+            word-wrap: break-word;
+            line-height: 1.2;
+            min-height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .dna-bubble:hover {
@@ -470,7 +454,6 @@
             border-color: var(--primary);
         }
 
-        /* CONNECTION LINES */
         #connection-lines {
             position: absolute;
             top: 0;
@@ -491,15 +474,15 @@
 
         .connection-point {
             position: absolute;
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             background: var(--primary);
             border-radius: 50%;
             transform: translate(-50%, -50%);
             z-index: 2;
             opacity: 0;
             transition: opacity 0.3s ease;
-            box-shadow: 0 0 10px var(--primary);
+            box-shadow: 0 0 8px var(--primary);
         }
 
         .connection-point.active {
@@ -512,19 +495,22 @@
             50% { transform: translate(-50%, -50%) scale(1.3); }
         }
 
-        /* VIDEO SECTION - RIGHT SIDE (4:5 RATIO) - NO HEADING */
         .dna-right {
             width: 400px;
-            height: 500px;
+            height: 580px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
         }
 
         .video-container {
             width: 100%;
-            height: 100%;
+            height: 500px;
             border-radius: 15px;
             overflow: hidden;
             border: none;
             background: transparent;
+            margin-top: 0;
         }
 
         .video-player {
@@ -537,7 +523,7 @@
 
         /* ===== ABOUT SECTION ===== */
         #about {
-            background: rgba(15, 23, 42, 0.6);
+            background: rgba(2, 6, 23, 0.7);
         }
 
         .about-content {
@@ -587,7 +573,7 @@
             transform: scaleX(1);
         }
 
-        /* ===== PROJECTS SECTION - HORIZONTAL CAROUSEL ===== */
+        /* ===== PROJECTS SECTION - IMPROVED ===== */
         #projects {
             background: rgba(2, 6, 23, 0.6);
             overflow: hidden;
@@ -604,36 +590,50 @@
             width: 100%;
             overflow: hidden;
             padding: 20px 0;
+            cursor: grab;
+            user-select: none;
+        }
+
+        .projects-carousel-container:active {
+            cursor: grabbing;
         }
 
         .projects-carousel-track {
             display: flex;
             gap: 30px;
-            animation: scrollHorizontal 30s linear infinite;
-            padding: 10px 0;
+            width: max-content;
         }
 
-        .projects-carousel-track:hover {
+        /* Auto Scroll Animation */
+        .projects-carousel-container .projects-carousel-track {
+            animation: autoScroll 40s linear infinite;
+        }
+
+        .projects-carousel-container:hover .projects-carousel-track {
             animation-play-state: paused;
         }
 
-        /* PROJECT CARDS - 4:5 ASPECT RATIO */
+        @keyframes autoScroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-330px * 5));
+            }
+        }
+
+        /* PROJECT CARDS - HEIGHT INCREASED & IMPROVED */
         .project-card {
             flex: 0 0 300px;
-            height: 375px;
+            height: 420px;
             background: rgba(15, 23, 42, 0.8);
             border-radius: 15px;
             overflow: hidden;
             border: 1px solid rgba(148, 163, 184, 0.1);
             transition: var(--transition);
-            opacity: 0;
-            transform: translateY(20px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .project-card.animate {
-            opacity: 1;
-            transform: translateY(0);
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
@@ -644,7 +644,7 @@
 
         .project-img {
             width: 100%;
-            height: 180px;
+            height: 200px;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
@@ -655,15 +655,18 @@
 
         .project-info {
             padding: 20px;
-            height: calc(375px - 180px);
+            flex: 1;
             display: flex;
             flex-direction: column;
         }
 
         .project-info h3 {
             font-size: 1.3rem;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             color: var(--primary);
+            min-height: 60px;
+            display: flex;
+            align-items: center;
         }
 
         .project-info p {
@@ -671,19 +674,24 @@
             color: var(--gray);
             margin-bottom: 15px;
             flex-grow: 1;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin: 10px 0;
+            margin: 10px 0 20px 0;
         }
 
         .tag {
             background: rgba(16, 185, 129, 0.2);
             color: var(--primary);
-            padding: 4px 10px;
+            padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 600;
@@ -691,43 +699,18 @@
 
         .project-btn {
             margin-top: auto;
+            text-align: center;
         }
 
-        /* Horizontal scrolling animation */
-        @keyframes scrollHorizontal {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(calc(-300px * 7 - 30px * 7));
-            }
-        }
-
-        /* Carousel Navigation */
-        .carousel-nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .carousel-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(148, 163, 184, 0.3);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .carousel-dot.active {
-            background: var(--primary);
-            transform: scale(1.2);
+        .project-btn .btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 0.9rem;
         }
 
         /* ===== CONTACT SECTION ===== */
         #contact {
-            background: rgba(15, 23, 42, 0.6);
+            background: rgba(2, 6, 23, 0.7);
         }
 
         .contact-container {
@@ -802,7 +785,7 @@
 
         /* ===== FOOTER ===== */
         footer {
-            background: rgba(2, 6, 23, 0.9);
+            background: rgba(2, 6, 23, 0.7);
             color: white;
             padding: 60px 0 30px;
             border-top: 1px solid rgba(148, 163, 184, 0.1);
@@ -880,26 +863,45 @@
             }
             
             .dna-left {
-                width: 500px;
-                height: 500px;
+                width: 480px;
+                height: 600px;
+                padding: 22px;
             }
             
             .dna-right {
-                width: 800px;
-                height: 825px;
+                width: 480px;
+                height: 500px;
             }
-
+            
+            .video-container {
+                height: 450px;
+            }
+            
+            .skills-grid {
+                gap: 8px;
+            }
+            
+            .dna-bubble {
+                font-size: 0.8rem;
+                padding: 9px 11px;
+                min-height: 42px;
+            }
+            
+            .category-title {
+                font-size: 0.9rem;
+            }
+            
             .project-card {
                 flex: 0 0 280px;
-                height: 350px;
+                height: 400px;
             }
-
-            @keyframes scrollHorizontal {
+            
+            @keyframes autoScroll {
                 0% {
                     transform: translateX(0);
                 }
                 100% {
-                    transform: translateX(calc(-280px * 7 - 30px * 7));
+                    transform: translateX(calc(-310px * 5));
                 }
             }
         }
@@ -942,63 +944,112 @@
                 color: var(--primary);
                 background: rgba(16, 185, 129, 0.1);
             }
+        
+           /* MOBILE HERO FIX - PICTURE TOP, TEXT BOTTOM */
+@media (max-width: 768px) {
+    #hero .hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    #hero .hero-image {
+        order: 1 !important;
+        margin-bottom: 30px;
+    }
+    #hero .hero-text {
+        order: 2 !important;
+    }
+}
             
-            .dna-left, .dna-right {
-                width: 100%;
-                max-width: 400px;
-            }
-            
+            /* MOBILE DNA */
             .dna-left {
-                height: 650px;
+                width: 100%;
+                max-width: 350px;
+                height: 500px;
+                padding: 20px;
             }
             
             .dna-right {
-                height: 700px;
+                width: 100%;
+                max-width: 350px;
+                height: 400px;
+            }
+            
+            .video-container {
+                height: 350px;
             }
             
             .skills-grid {
                 grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+            }
+            
+            .dna-bubble {
+                font-size: 0.75rem;
+                padding: 8px 10px;
+                min-height: 40px;
+                line-height: 1.1;
+            }
+            
+            .category-title {
+                font-size: 0.85rem;
+                margin-bottom: 10px;
+            }
+            
+            .dna-category {
+                margin-bottom: 20px;
+            }
+            
+            .dna-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .dna-header p {
+                font-size: 0.85rem;
+            }
+            
+            /* MOBILE PROJECTS */
+            .project-card {
+                flex: 0 0 250px;
+                height: 380px;
+            }
+
+            .project-img {
+                height: 170px;
+            }
+
+            .project-info h3 {
+                font-size: 1.1rem;
+                min-height: 50px;
+            }
+
+            .project-info p {
+                font-size: 0.85rem;
+                -webkit-line-clamp: 3;
+            }
+            
+            @keyframes autoScroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-280px * 5));
+                }
             }
             
             .about-content,
             .contact-container {
                 grid-template-columns: 1fr;
             }
-
-            /* Mobile Projects - Still horizontal but smaller */
-            .project-card {
-                flex: 0 0 250px;
-                height: 312px;
-            }
-
-            .project-img {
-                height: 150px;
-            }
-
-            .project-info {
-                height: calc(312px - 150px);
-                padding: 15px;
-            }
-
-            @keyframes scrollHorizontal {
-                0% {
-                    transform: translateX(0);
-                }
-                100% {
-                    transform: translateX(calc(-250px * 7 - 30px * 7));
-                }
-            }
         }
 
-        @media (max-width: 780px) {
+        @media (max-width: 480px) {
             section { padding: 70px 0; }
             
             h1 { font-size: 2.5rem; }
             h2 { font-size: 2rem; }
             
             .hero-content {
-                flex-direction: column;
-                text-align: center;
+                gap: 30px;
             }
             
             .profile-img {
@@ -1006,48 +1057,61 @@
                 height: 350px;
             }
             
+            .dna-left {
+                max-width: 320px;
+                height: 480px;
+                padding: 18px;
+            }
+            
+            .dna-right {
+                max-width: 320px;
+                height: 350px;
+            }
+            
+            .video-container {
+                height: 300px;
+            }
+            
             .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
+                gap: 6px;
             }
             
             .dna-bubble {
-                font-size: 0.8rem;
-                padding: 8px 12px;
+                font-size: 0.7rem;
+                padding: 7px 9px;
+                min-height: 38px;
             }
             
-            .dna-left, .dna-right {
-                padding: 20px;
+            .category-title {
+                font-size: 0.8rem;
             }
-
+            
             .project-card {
                 flex: 0 0 220px;
-                height: 275px;
+                height: 360px;
             }
 
             .project-img {
-                height: 130px;
+                height: 150px;
             }
 
             .project-info {
-                height: calc(275px - 130px);
-                padding: 12px;
+                padding: 15px;
             }
 
             .project-info h3 {
                 font-size: 1.1rem;
+                min-height: 45px;
             }
 
             .project-info p {
                 font-size: 0.8rem;
+                -webkit-line-clamp: 3;
             }
-
-            @keyframes scrollHorizontal {
-                0% {
-                    transform: translateX(0);
-                }
-                100% {
-                    transform: translateX(calc(-220px * 7 - 30px * 7));
-                }
+            
+            .project-tags {
+                margin: 8px 0 15px 0;
             }
         }
     </style>
@@ -1114,7 +1178,7 @@
         <div class="container">
             <h2>My Creative DNA</h2>
             <div class="dna-container">
-                <!-- LEFT: DNA Grid (Exact Square) -->
+                <!-- LEFT: DNA Grid -->
                 <div class="dna-left" id="dna-grid-container">
                     <div class="dna-header">
                         <h2>Creative Skills</h2>
@@ -1127,8 +1191,8 @@
                         <div class="dna-category">
                             <div class="category-title">Design Tools</div>
                             <div class="skills-grid">
-                                <div class="dna-bubble" data-id="1" data-skill="Photoshop" data-length="medium">Photoshop</div>
-                                <div class="dna-bubble" data-id="2" data-skill="Illustrator" data-length="medium">Illustrator</div>
+                                <div class="dna-bubble" data-id="1" data-skill="Photoshop">Photoshop</div>
+                                <div class="dna-bubble" data-id="2" data-skill="Illustrator">Illustrator</div>
                             </div>
                         </div>
                         
@@ -1136,10 +1200,10 @@
                         <div class="dna-category">
                             <div class="category-title">Branding & Strategy</div>
                             <div class="skills-grid">
-                                <div class="dna-bubble" data-id="3" data-skill="Branding" data-length="short">Branding</div>
-                                <div class="dna-bubble" data-id="4" data-skill="Marketing" data-length="short">Marketing</div>
-                                <div class="dna-bubble" data-id="5" data-skill="Copywriting" data-length="long">Copywriting</div>
-                                <div class="dna-bubble" data-id="6" data-skill="Logo Design" data-length="medium">Logo Design</div>
+                                <div class="dna-bubble" data-id="3" data-skill="Branding">Branding</div>
+                                <div class="dna-bubble" data-id="4" data-skill="Marketing">Marketing</div>
+                                <div class="dna-bubble" data-id="5" data-skill="Copywriting">Copywriting</div>
+                                <div class="dna-bubble" data-id="6" data-skill="Logo Design">Logo Design</div>
                             </div>
                         </div>
                         
@@ -1147,9 +1211,9 @@
                         <div class="dna-category">
                             <div class="category-title">Digital Marketing</div>
                             <div class="skills-grid">
-                                <div class="dna-bubble" data-id="7" data-skill="Meta Ads" data-length="short">Meta Ads</div>
-                                <div class="dna-bubble" data-id="8" data-skill="Audience Targeting" data-length="long">Audience Targeting</div>
-                                <div class="dna-bubble" data-id="9" data-skill="UI/UX Design" data-length="medium">UI/UX Design</div>
+                                <div class="dna-bubble" data-id="7" data-skill="Meta Ads">Meta Ads</div>
+                                <div class="dna-bubble" data-id="8" data-skill="Audience Targeting">Audience Targeting</div>
+                                <div class="dna-bubble" data-id="9" data-skill="UI/UX Design">UI/UX Design</div>
                             </div>
                         </div>
                         
@@ -1157,9 +1221,9 @@
                         <div class="dna-category">
                             <div class="category-title">Visual Design</div>
                             <div class="skills-grid">
-                                <div class="dna-bubble" data-id="10" data-skill="Typography" data-length="long">Typography</div>
-                                <div class="dna-bubble" data-id="11" data-skill="Color Theory" data-length="medium">Color Theory</div>
-                                <div class="dna-bubble" data-id="12" data-skill="Layout Design" data-length="medium">Layout Design</div>
+                                <div class="dna-bubble" data-id="10" data-skill="Typography">Typography</div>
+                                <div class="dna-bubble" data-id="11" data-skill="Color Theory">Color Theory</div>
+                                <div class="dna-bubble" data-id="12" data-skill="Layout Design">Layout Design</div>
                             </div>
                         </div>
                     </div>
@@ -1168,10 +1232,11 @@
                     <div id="connection-lines"></div>
                 </div>
                 
-                <!-- RIGHT: Video Course (4:5 Ratio) - NO HEADING -->
+                <!-- RIGHT: Video Course -->
                 <div class="dna-right">
                     <div class="video-container">
-                        <video class="video-player" controls poster="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80">
+                        <!-- Video with auto play, muted, loop - no controls, no poster -->
+                        <video class="video-player" autoplay muted loop playsinline>
                             <source src="vid1.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -1231,130 +1296,178 @@
         </div>
     </section>
 
-    <!-- Projects Section - HORIZONTAL CAROUSEL -->
+    <!-- Projects Section - 10 CARDS IMPROVED -->
     <section id="projects">
         <div class="container">
             <div class="projects-header">
                 <h2>My Projects</h2>
-                <p style="color: var(--gray); margin-top: 10px;">Scroll horizontally to view more projects</p>
+                <p style="color: var(--gray); margin-top: 10px;">Hover/Touch to pause • Drag/Swipe to scroll</p>
             </div>
             
-            <div class="projects-carousel-container">
+            <!-- BUTTONS REMOVED HERE -->
+            
+            <div class="projects-carousel-container" id="carouselContainer">
                 <div class="projects-carousel-track" id="projectsCarousel">
                     <!-- Project 1 -->
                     <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1064&q=80" alt="Brand Identity Project" class="project-img" loading="lazy">
+                        <img src="card1.jpg" alt="Brand Identity Project" class="project-img" loading="lazy">
                         <div class="project-info">
                             <h3>EcoLife Brand Identity</h3>
-                            <p>Complete brand identity design for an eco-friendly products company, including logo, packaging, and marketing materials.</p>
+                            <p>Complete brand identity design for an eco-friendly products company with logo and packaging.</p>
                             <div class="project-tags">
                                 <span class="tag">Logo Design</span>
                                 <span class="tag">Branding</span>
-                                <span class="tag">Packaging</span>
                             </div>
-                            <a href="#" class="btn project-btn">View Project</a>
+                            <div class="project-btn">
+                                <a href="#" class="btn">View Project</a>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Project 2 -->
                     <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1115&q=80" alt="Digital Marketing Campaign" class="project-img" loading="lazy">
+                        <img src="card2.jpg" alt="Digital Marketing Campaign" class="project-img" loading="lazy">
                         <div class="project-info">
                             <h3>TechGadgets Social Campaign</h3>
-                            <p>Digital marketing campaign that increased social media engagement by 300% and drove 50% more website traffic.</p>
+                            <p>Digital marketing campaign that increased social media engagement by 300% and website traffic.</p>
                             <div class="project-tags">
                                 <span class="tag">Social Media</span>
-                                <span class="tag">Digital Marketing</span>
-                                <span class="tag">Content Strategy</span>
+                                <span class="tag">Marketing</span>
                             </div>
-                            <a href="#" class="btn project-btn">View Project</a>
+                            <div class="project-btn">
+                                <a href="#" class="btn">View Project</a>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Project 3 -->
                     <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1558655146-364adaf1fcc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Website Redesign" class="project-img" loading="lazy">
+                        <img src="card3.jpg" alt="Website Redesign" class="project-img" loading="lazy">
                         <div class="project-info">
                             <h3>Foodies Website Redesign</h3>
-                            <p>Complete UI/UX redesign for a food delivery service website, resulting in 40% increase in user conversions.</p>
+                            <p>UI/UX redesign for food delivery service resulting in 40% increase in user conversions.</p>
                             <div class="project-tags">
                                 <span class="tag">UI/UX Design</span>
                                 <span class="tag">Web Design</span>
-                                <span class="tag">Prototyping</span>
                             </div>
-                            <a href="#" class="btn project-btn">View Project</a>
+                            <div class="project-btn">
+                                <a href="#" class="btn">View Project</a>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Project 4 -->
                     <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Mobile App Design" class="project-img" loading="lazy">
+                        <img src="card4.jpg" alt="Mobile App Design" class="project-img" loading="lazy">
                         <div class="project-info">
                             <h3>Fitness App UI Design</h3>
-                            <p>Modern mobile app design for a fitness tracking application with personalized workout plans and progress tracking.</p>
+                            <p>Modern mobile app design for fitness tracking with personalized workout plans.</p>
                             <div class="project-tags">
                                 <span class="tag">App Design</span>
                                 <span class="tag">UI/UX</span>
-                                <span class="tag">Mobile</span>
                             </div>
-                            <a href="#" class="btn project-btn">View Project</a>
+                            <div class="project-btn">
+                                <a href="#" class="btn">View Project</a>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Project 5 -->
                     <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1565688534245-05d6b5be184a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Product Packaging" class="project-img" loading="lazy">
+                        <img src="card5.jpg" alt="Product Packaging" class="project-img" loading="lazy">
                         <div class="project-info">
                             <h3>Organic Tea Packaging</h3>
-                            <p>Eco-friendly packaging design for an organic tea brand, focusing on sustainability and premium visual appeal.</p>
+                            <p>Eco-friendly packaging design focusing on sustainability and premium visual appeal.</p>
                             <div class="project-tags">
                                 <span class="tag">Packaging</span>
                                 <span class="tag">Product Design</span>
-                                <span class="tag">Sustainability</span>
                             </div>
-                            <a href="#" class="btn project-btn">View Project</a>
+                            <div class="project-btn">
+                                <a href="#" class="btn">View Project</a>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Project 6 -->
                     <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Social Media Graphics" class="project-img" loading="lazy">
+                        <img src="card6.jpg" alt="Social Media Graphics" class="project-img" loading="lazy">
                         <div class="project-info">
                             <h3>Social Media Brand Kit</h3>
-                            <p>Complete social media graphics package including templates, stories, and banners for consistent brand presence.</p>
+                            <p>Complete social media graphics package including templates and banners for brand presence.</p>
                             <div class="project-tags">
                                 <span class="tag">Social Media</span>
                                 <span class="tag">Graphics</span>
-                                <span class="tag">Templates</span>
                             </div>
-                            <a href="#" class="btn project-btn">View Project</a>
+                            <div class="project-btn">
+                                <a href="#" class="btn">View Project</a>
+                            </div>
                         </div>
                     </div>
                     
-                    <!-- Project 7 (Duplicate for infinite scroll effect) -->
+                    <!-- Project 7 -->
                     <div class="project-card">
-                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1064&q=80" alt="Brand Identity Project" class="project-img" loading="lazy">
+                        <img src="card7.jpg" alt="Website Development" class="project-img" loading="lazy">
                         <div class="project-info">
-                            <h3>EcoLife Brand Identity</h3>
-                            <p>Complete brand identity design for an eco-friendly products company, including logo, packaging, and marketing materials.</p>
+                            <h3>E-Commerce Website</h3>
+                            <p>Full-stack e-commerce website with secure payment gateway and responsive design.</p>
                             <div class="project-tags">
-                                <span class="tag">Logo Design</span>
-                                <span class="tag">Branding</span>
-                                <span class="tag">Packaging</span>
+                                <span class="tag">Web Development</span>
+                                <span class="tag">E-Commerce</span>
                             </div>
-                            <a href="#" class="btn project-btn">View Project</a>
+                            <div class="project-btn">
+                                <a href="#" class="btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 8 -->
+                    <div class="project-card">
+                        <img src="card8.jpg" alt="Social Media Management" class="project-img" loading="lazy">
+                        <div class="project-info">
+                            <h3>Social Media Management</h3>
+                            <p>Social media management for fashion brand with content calendar and analytics.</p>
+                            <div class="project-tags">
+                                <span class="tag">Social Media</span>
+                                <span class="tag">Strategy</span>
+                            </div>
+                            <div class="project-btn">
+                                <a href="#" class="btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 9 -->
+                    <div class="project-card">
+                        <img src="card9.jpg" alt="Video Editing" class="project-img" loading="lazy">
+                        <div class="project-info">
+                            <h3>Corporate Video Editing</h3>
+                            <p>Professional video editing for corporate clients with motion graphics and sound design.</p>
+                            <div class="project-tags">
+                                <span class="tag">Video Editing</span>
+                                <span class="tag">Animation</span>
+                            </div>
+                            <div class="project-btn">
+                                <a href="#" class="btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 10 -->
+                    <div class="project-card">
+                        <img src="card10.jpg" alt="Email Marketing" class="project-img" loading="lazy">
+                        <div class="project-info">
+                            <h3>Email Marketing Campaign</h3>
+                            <p>Email marketing campaign design with responsive templates and performance tracking.</p>
+                            <div class="project-tags">
+                                <span class="tag">Email Marketing</span>
+                                <span class="tag">Automation</span>
+                            </div>
+                            <div class="project-btn">
+                                <a href="#" class="btn">View Project</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="carousel-nav">
-                <div class="carousel-dot active" data-index="0"></div>
-                <div class="carousel-dot" data-index="1"></div>
-                <div class="carousel-dot" data-index="2"></div>
-                <div class="carousel-dot" data-index="3"></div>
-                <div class="carousel-dot" data-index="4"></div>
-                <div class="carousel-dot" data-index="5"></div>
             </div>
         </div>
     </section>
@@ -1509,7 +1622,6 @@
             init() {
                 this.createConnections();
                 this.setupEventListeners();
-                this.setupBubbleSizes();
             }
             
             createConnections() {
@@ -1545,21 +1657,6 @@
                 
                 this.connectionsContainer.addEventListener('click', (e) => {
                     e.stopPropagation();
-                });
-            }
-            
-            setupBubbleSizes() {
-                this.bubbles.forEach(bubble => {
-                    const text = bubble.textContent.trim();
-                    const length = text.length;
-                    
-                    if (length <= 8) {
-                        bubble.setAttribute('data-length', 'short');
-                    } else if (length <= 12) {
-                        bubble.setAttribute('data-length', 'medium');
-                    } else {
-                        bubble.setAttribute('data-length', 'long');
-                    }
                 });
             }
             
@@ -1661,9 +1758,9 @@
                 text.setAttribute("y", labelY);
                 text.setAttribute("text-anchor", "middle");
                 text.setAttribute("fill", "#10B981");
-                text.setAttribute("font-size", "10");
+                text.setAttribute("font-size", "9");
                 text.setAttribute("font-weight", "600");
-                text.setAttribute("dy", "4");
+                text.setAttribute("dy", "3");
                 text.textContent = label;
                 svg.appendChild(text);
             }
@@ -1688,120 +1785,98 @@
             }
         }
 
-        // Projects Carousel System
-        class ProjectsCarousel {
+        // Simple Projects Carousel with Auto-Scroll and Manual Controls
+        class SimpleCarousel {
             constructor() {
-                this.carouselTrack = document.getElementById('projectsCarousel');
-                this.dots = document.querySelectorAll('.carousel-dot');
-                this.currentIndex = 0;
-                this.totalProjects = 6; // Actual projects (excluding duplicate)
-                this.isPaused = false;
+                this.container = document.getElementById('carouselContainer');
+                this.track = document.getElementById('projectsCarousel');
+                this.isDragging = false;
+                this.startX = 0;
+                this.scrollLeft = 0;
                 
                 this.init();
             }
             
             init() {
                 this.setupEventListeners();
-                this.updateDots();
-                this.setupAutoScroll();
             }
             
             setupEventListeners() {
-                // Pause on hover
-                this.carouselTrack.addEventListener('mouseenter', () => {
-                    this.isPaused = true;
-                    this.carouselTrack.style.animationPlayState = 'paused';
-                });
-                
-                this.carouselTrack.addEventListener('mouseleave', () => {
-                    this.isPaused = false;
-                    this.carouselTrack.style.animationPlayState = 'running';
-                });
-                
-                // Dot navigation
-                this.dots.forEach(dot => {
-                    dot.addEventListener('click', () => {
-                        const index = parseInt(dot.getAttribute('data-index'));
-                        this.goToProject(index);
-                    });
-                });
-                
-                // Touch swipe for mobile
-                this.setupTouchEvents();
-            }
-            
-            setupTouchEvents() {
-                let startX = 0;
-                let endX = 0;
-                
-                this.carouselTrack.addEventListener('touchstart', (e) => {
-                    startX = e.touches[0].clientX;
-                });
-                
-                this.carouselTrack.addEventListener('touchmove', (e) => {
-                    endX = e.touches[0].clientX;
-                });
-                
-                this.carouselTrack.addEventListener('touchend', () => {
-                    const diff = startX - endX;
+                // Mouse drag events
+                if (this.track) {
+                    this.track.addEventListener('mousedown', (e) => this.startDrag(e));
+                    this.track.addEventListener('mousemove', (e) => this.drag(e));
+                    this.track.addEventListener('mouseup', () => this.endDrag());
+                    this.track.addEventListener('mouseleave', () => this.endDrag());
                     
-                    if (Math.abs(diff) > 50) { // Minimum swipe distance
-                        if (diff > 0) {
-                            this.nextProject(); // Swipe left
-                        } else {
-                            this.prevProject(); // Swipe right
-                        }
-                    }
-                });
+                    // Touch events for mobile
+                    this.track.addEventListener('touchstart', (e) => this.startDrag(e.touches[0]));
+                    this.track.addEventListener('touchmove', (e) => this.drag(e.touches[0]));
+                    this.track.addEventListener('touchend', () => this.endDrag());
+                    
+                    // Wheel scroll
+                    this.track.addEventListener('wheel', (e) => this.handleWheel(e));
+                }
             }
             
-            setupAutoScroll() {
-                // Reset animation when it completes (infinite loop)
-                this.carouselTrack.addEventListener('animationiteration', () => {
-                    this.currentIndex = (this.currentIndex + 1) % this.totalProjects;
-                    this.updateDots();
-                });
+            startDrag(e) {
+                this.isDragging = true;
+                this.startX = e.pageX - this.track.offsetLeft;
+                this.scrollLeft = this.getCurrentScroll();
+                this.track.style.cursor = 'grabbing';
+                this.track.style.animationPlayState = 'paused';
+                this.track.style.transition = 'none';
             }
             
-            goToProject(index) {
-                this.currentIndex = index;
-                this.updateDots();
+            drag(e) {
+                if (!this.isDragging) return;
+                e.preventDefault();
                 
-                // Calculate scroll position
-                const cardWidth = 300; // Adjust based on actual card width
-                const gap = 30;
-                const scrollPosition = index * (cardWidth + gap);
+                const x = e.pageX - this.track.offsetLeft;
+                const walk = (x - this.startX) * 1.5;
                 
-                // Smooth scroll to project
-                this.carouselTrack.style.transition = 'transform 0.5s ease';
-                this.carouselTrack.style.transform = `translateX(-${scrollPosition}px)`;
+                this.track.style.transform = `translateX(${this.scrollLeft - walk}px)`;
+            }
+            
+            endDrag() {
+                this.isDragging = false;
+                this.track.style.cursor = 'grab';
+                this.track.style.animationPlayState = 'running';
+                this.track.style.transition = 'transform 0.3s ease';
                 
-                // Reset animation after manual navigation
+                // Reset to auto-scroll if at boundaries
                 setTimeout(() => {
-                    this.carouselTrack.style.transition = '';
-                    this.carouselTrack.style.transform = '';
-                    this.carouselTrack.style.animationPlayState = this.isPaused ? 'paused' : 'running';
+                    if (!this.isDragging) {
+                        this.track.style.animationPlayState = 'running';
+                    }
+                }, 300);
+            }
+            
+            handleWheel(e) {
+                e.preventDefault();
+                this.track.style.animationPlayState = 'paused';
+                
+                const delta = e.deltaY > 0 ? 50 : -50;
+                const currentScroll = this.getCurrentScroll();
+                const newScroll = currentScroll - delta;
+                
+                this.track.style.transform = `translateX(${newScroll}px)`;
+                
+                // Resume auto-scroll after wheel stops
+                clearTimeout(this.wheelTimeout);
+                this.wheelTimeout = setTimeout(() => {
+                    if (!this.isDragging) {
+                        this.track.style.animationPlayState = 'running';
+                    }
                 }, 500);
             }
             
-            nextProject() {
-                const nextIndex = (this.currentIndex + 1) % this.totalProjects;
-                this.goToProject(nextIndex);
-            }
-            
-            prevProject() {
-                const prevIndex = (this.currentIndex - 1 + this.totalProjects) % this.totalProjects;
-                this.goToProject(prevIndex);
-            }
-            
-            updateDots() {
-                this.dots.forEach((dot, index) => {
-                    if (index === this.currentIndex) {
-                        dot.classList.add('active');
-                    } else {
-                        dot.classList.remove('active');
-                    }
-                });
+            getCurrentScroll() {
+                const transform = this.track.style.transform;
+                if (!transform || transform === 'none') return 0;
+                
+                const match = transform.match(/translateX\(([-]?\d+)px\)/);
+                return match ? parseInt(match[1]) : 0;
             }
         }
 
@@ -1847,12 +1922,7 @@
         });
 
         function resetSectionAnimations(sectionId) {
-            if (sectionId === 'projects') {
-                document.querySelectorAll('.project-card').forEach(card => {
-                    card.classList.remove('animate');
-                    void card.offsetWidth;
-                });
-            } else if (sectionId === 'about') {
+            if (sectionId === 'about') {
                 document.querySelectorAll('.skill-level').forEach(skill => {
                     skill.style.transition = 'none';
                     skill.style.transform = 'scaleX(0)';
@@ -1869,13 +1939,7 @@
         }
 
         function triggerSectionAnimations(sectionId) {
-            if (sectionId === 'projects') {
-                document.querySelectorAll('.project-card').forEach((card, index) => {
-                    setTimeout(() => {
-                        card.classList.add('animate');
-                    }, index * 100);
-                });
-            } else if (sectionId === 'about') {
+            if (sectionId === 'about') {
                 setTimeout(() => {
                     document.querySelector('.skills').classList.add('skill-animate');
                     document.querySelectorAll('.skill-level').forEach(skill => {
@@ -1970,8 +2034,21 @@
             createEnhancedStars();
             createParticles();
             new CreativeDNA();
-            new ProjectsCarousel();
-            triggerSectionAnimations('hero');
+            new SimpleCarousel();
+            
+            // Mobile detection for hero animation
+            if (window.innerWidth <= 768) {
+                const heroImage = document.querySelector('.hero-image');
+                const heroText = document.querySelector('.hero-text');
+                
+                if (heroImage) heroImage.style.animation = 'fadeInUp 1s 0.5s forwards';
+                if (heroText) heroText.style.animation = 'fadeInUp 1s 1s forwards';
+            } else {
+                const heroElements = document.querySelectorAll('#hero .hero-text h1, #hero .hero-text .subtitle, #hero .hero-text p, #hero .hero-btns, #hero .profile-img');
+                heroElements.forEach((el, index) => {
+                    el.style.animationDelay = `${0.5 + index * 0.2}s`;
+                });
+            }
         });
 
         // Handle image loading errors
@@ -1979,6 +2056,12 @@
             if (e.target.tagName === 'IMG') {
                 e.target.style.opacity = '0.7';
                 e.target.style.filter = 'grayscale(1)';
+                if (e.target.src.includes('card')) {
+                    const cardNumber = e.target.src.match(/card(\d+)\.jpg/);
+                    if (cardNumber) {
+                        e.target.src = `https://images.unsplash.com/photo-${150 + parseInt(cardNumber[1])}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`;
+                    }
+                }
             }
         }, true);
     </script>
