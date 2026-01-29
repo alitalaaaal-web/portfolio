@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Talal - Content Creator|| Digital Marketer & Graphic Designer</title>
+    <title>Ali Talal - Graphic Designer & Digital Marketer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="description" content="Ali Talal - Professional Graphic Designer & Digital Marketer">
     <meta name="keywords" content="graphic designer, digital marketer, branding, web design, UI/UX">
@@ -282,7 +282,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(to bottom, rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.7));
+            background: linear-gradient(to bottom, rgba(2, 6, 23, 0.7), rgba(15, 23, 42, 0.8));
         }
 
         .hero-content {
@@ -523,7 +523,7 @@
 
         /* ===== ABOUT SECTION ===== */
         #about {
-            background: rgba(2, 6, 23, 0.7);
+            background: rgba(15, 23, 42, 0.6);
         }
 
         .about-content {
@@ -573,144 +573,9 @@
             transform: scaleX(1);
         }
 
-        /* ===== PROJECTS SECTION - IMPROVED ===== */
-        #projects {
-            background: rgba(2, 6, 23, 0.6);
-            overflow: hidden;
-            position: relative;
-        }
-
-        .projects-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .projects-carousel-container {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            padding: 20px 0;
-            cursor: grab;
-            user-select: none;
-        }
-
-        .projects-carousel-container:active {
-            cursor: grabbing;
-        }
-
-        .projects-carousel-track {
-            display: flex;
-            gap: 30px;
-            width: max-content;
-        }
-
-        /* Auto Scroll Animation */
-        .projects-carousel-container .projects-carousel-track {
-            animation: autoScroll 40s linear infinite;
-        }
-
-        .projects-carousel-container:hover .projects-carousel-track {
-            animation-play-state: paused;
-        }
-
-        @keyframes autoScroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(calc(-330px * 5));
-            }
-        }
-
-        /* PROJECT CARDS - HEIGHT INCREASED & IMPROVED */
-        .project-card {
-            flex: 0 0 300px;
-            height: 420px;
-            background: rgba(15, 23, 42, 0.8);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(148, 163, 184, 0.1);
-            transition: var(--transition);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
-        }
-
-        .project-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .project-card:hover .project-img {
-            transform: scale(1.05);
-        }
-
-        .project-info {
-            padding: 20px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-            color: var(--primary);
-            min-height: 60px;
-            display: flex;
-            align-items: center;
-        }
-
-        .project-info p {
-            font-size: 0.9rem;
-            color: var(--gray);
-            margin-bottom: 15px;
-            flex-grow: 1;
-            line-height: 1.5;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin: 10px 0 20px 0;
-        }
-
-        .tag {
-            background: rgba(16, 185, 129, 0.2);
-            color: var(--primary);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .project-btn {
-            margin-top: auto;
-            text-align: center;
-        }
-
-        .project-btn .btn {
-            width: 100%;
-            padding: 10px;
-            font-size: 0.9rem;
-        }
-
         /* ===== CONTACT SECTION ===== */
         #contact {
-            background: rgba(2, 6, 23, 0.7);
+            background: rgba(15, 23, 42, 0.6);
         }
 
         .contact-container {
@@ -785,7 +650,7 @@
 
         /* ===== FOOTER ===== */
         footer {
-            background: rgba(2, 6, 23, 0.7);
+            background: rgba(2, 6, 23, 0.9);
             color: white;
             padding: 60px 0 30px;
             border-top: 1px solid rgba(148, 163, 184, 0.1);
@@ -890,20 +755,6 @@
             .category-title {
                 font-size: 0.9rem;
             }
-            
-            .project-card {
-                flex: 0 0 280px;
-                height: 400px;
-            }
-            
-            @keyframes autoScroll {
-                0% {
-                    transform: translateX(0);
-                }
-                100% {
-                    transform: translateX(calc(-310px * 5));
-                }
-            }
         }
 
         @media (max-width: 768px) {
@@ -945,20 +796,20 @@
                 background: rgba(16, 185, 129, 0.1);
             }
         
-           /* MOBILE HERO FIX - PICTURE TOP, TEXT BOTTOM */
-@media (max-width: 768px) {
-    #hero .hero-content {
-        display: flex !important;
-        flex-direction: column !important;
-    }
-    #hero .hero-image {
-        order: 1 !important;
-        margin-bottom: 30px;
-    }
-    #hero .hero-text {
-        order: 2 !important;
-    }
-}
+            /* MOBILE HERO FIX - PICTURE TOP, TEXT BOTTOM */
+            @media (max-width: 768px) {
+                #hero .hero-content {
+                    display: flex !important;
+                    flex-direction: column-reverse !important;
+                }
+                #hero .hero-image {
+                    order: 1 !important;
+                    margin-bottom: 30px;
+                }
+                #hero .hero-text {
+                    order: 2 !important;
+                }
+            }
             
             /* MOBILE DNA */
             .dna-left {
@@ -1005,35 +856,6 @@
             
             .dna-header p {
                 font-size: 0.85rem;
-            }
-            
-            /* MOBILE PROJECTS */
-            .project-card {
-                flex: 0 0 250px;
-                height: 380px;
-            }
-
-            .project-img {
-                height: 170px;
-            }
-
-            .project-info h3 {
-                font-size: 1.1rem;
-                min-height: 50px;
-            }
-
-            .project-info p {
-                font-size: 0.85rem;
-                -webkit-line-clamp: 3;
-            }
-            
-            @keyframes autoScroll {
-                0% {
-                    transform: translateX(0);
-                }
-                100% {
-                    transform: translateX(calc(-280px * 5));
-                }
             }
             
             .about-content,
@@ -1086,33 +908,6 @@
             .category-title {
                 font-size: 0.8rem;
             }
-            
-            .project-card {
-                flex: 0 0 220px;
-                height: 360px;
-            }
-
-            .project-img {
-                height: 150px;
-            }
-
-            .project-info {
-                padding: 15px;
-            }
-
-            .project-info h3 {
-                font-size: 1.1rem;
-                min-height: 45px;
-            }
-
-            .project-info p {
-                font-size: 0.8rem;
-                -webkit-line-clamp: 3;
-            }
-            
-            .project-tags {
-                margin: 8px 0 15px 0;
-            }
         }
     </style>
 </head>
@@ -1135,7 +930,6 @@
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#creative-dna">Creative DNA</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             
@@ -1148,7 +942,6 @@
             <a href="#hero">Home</a>
             <a href="#creative-dna">Creative DNA</a>
             <a href="#about">About</a>
-            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -1162,7 +955,7 @@
                 <p>I create stunning visual identities and digital experiences that help brands stand out. With expertise in graphic design, branding, and digital marketing, I transform ideas into impactful visual stories that drive engagement and growth.</p>
                 
                 <div class="hero-btns">
-                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="#creative-dna" class="btn">View My Skills</a>
                     <a href="#contact" class="btn btn-outline">Get In Touch</a>
                 </div>
             </div>
@@ -1291,182 +1084,6 @@
                 
                 <div class="about-image">
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Design Workspace" style="width:100%; border-radius:15px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section - 10 CARDS IMPROVED -->
-    <section id="projects">
-        <div class="container">
-            <div class="projects-header">
-                <h2>My Projects</h2>
-                <p style="color: var(--gray); margin-top: 10px;">Hover/Touch to pause • Drag/Swipe to scroll</p>
-            </div>
-            
-            <!-- BUTTONS REMOVED HERE -->
-            
-            <div class="projects-carousel-container" id="carouselContainer">
-                <div class="projects-carousel-track" id="projectsCarousel">
-                    <!-- Project 1 -->
-                    <div class="project-card">
-                        <img src="card1.jpg" alt="Brand Identity Project" class="project-img" loading="lazy">
-                        <div class="project-info">
-                            <h3>EcoLife Brand Identity</h3>
-                            <p>Complete brand identity design for an eco-friendly products company with logo and packaging.</p>
-                            <div class="project-tags">
-                                <span class="tag">Logo Design</span>
-                                <span class="tag">Branding</span>
-                            </div>
-                            <div class="project-btn">
-                                <a href="#" class="btn">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 2 -->
-                    <div class="project-card">
-                        <img src="card2.jpg" alt="Digital Marketing Campaign" class="project-img" loading="lazy">
-                        <div class="project-info">
-                            <h3>TechGadgets Social Campaign</h3>
-                            <p>Digital marketing campaign that increased social media engagement by 300% and website traffic.</p>
-                            <div class="project-tags">
-                                <span class="tag">Social Media</span>
-                                <span class="tag">Marketing</span>
-                            </div>
-                            <div class="project-btn">
-                                <a href="#" class="btn">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card">
-                        <img src="card3.jpg" alt="Website Redesign" class="project-img" loading="lazy">
-                        <div class="project-info">
-                            <h3>Foodies Website Redesign</h3>
-                            <p>UI/UX redesign for food delivery service resulting in 40% increase in user conversions.</p>
-                            <div class="project-tags">
-                                <span class="tag">UI/UX Design</span>
-                                <span class="tag">Web Design</span>
-                            </div>
-                            <div class="project-btn">
-                                <a href="#" class="btn">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 4 -->
-                    <div class="project-card">
-                        <img src="card4.jpg" alt="Mobile App Design" class="project-img" loading="lazy">
-                        <div class="project-info">
-                            <h3>Fitness App UI Design</h3>
-                            <p>Modern mobile app design for fitness tracking with personalized workout plans.</p>
-                            <div class="project-tags">
-                                <span class="tag">App Design</span>
-                                <span class="tag">UI/UX</span>
-                            </div>
-                            <div class="project-btn">
-                                <a href="#" class="btn">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 5 -->
-                    <div class="project-card">
-                        <img src="card5.jpg" alt="Product Packaging" class="project-img" loading="lazy">
-                        <div class="project-info">
-                            <h3>Organic Tea Packaging</h3>
-                            <p>Eco-friendly packaging design focusing on sustainability and premium visual appeal.</p>
-                            <div class="project-tags">
-                                <span class="tag">Packaging</span>
-                                <span class="tag">Product Design</span>
-                            </div>
-                            <div class="project-btn">
-                                <a href="#" class="btn">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 6 -->
-                    <div class="project-card">
-                        <img src="card6.jpg" alt="Social Media Graphics" class="project-img" loading="lazy">
-                        <div class="project-info">
-                            <h3>Social Media Brand Kit</h3>
-                            <p>Complete social media graphics package including templates and banners for brand presence.</p>
-                            <div class="project-tags">
-                                <span class="tag">Social Media</span>
-                                <span class="tag">Graphics</span>
-                            </div>
-                            <div class="project-btn">
-                                <a href="#" class="btn">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 7 -->
-                    <div class="project-card">
-                        <img src="card7.jpg" alt="Website Development" class="project-img" loading="lazy">
-                        <div class="project-info">
-                            <h3>E-Commerce Website</h3>
-                            <p>Full-stack e-commerce website with secure payment gateway and responsive design.</p>
-                            <div class="project-tags">
-                                <span class="tag">Web Development</span>
-                                <span class="tag">E-Commerce</span>
-                            </div>
-                            <div class="project-btn">
-                                <a href="#" class="btn">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 8 -->
-                    <div class="project-card">
-                        <img src="card8.jpg" alt="Social Media Management" class="project-img" loading="lazy">
-                        <div class="project-info">
-                            <h3>Social Media Management</h3>
-                            <p>Social media management for fashion brand with content calendar and analytics.</p>
-                            <div class="project-tags">
-                                <span class="tag">Social Media</span>
-                                <span class="tag">Strategy</span>
-                            </div>
-                            <div class="project-btn">
-                                <a href="#" class="btn">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 9 -->
-                    <div class="project-card">
-                        <img src="card9.jpg" alt="Video Editing" class="project-img" loading="lazy">
-                        <div class="project-info">
-                            <h3>Corporate Video Editing</h3>
-                            <p>Professional video editing for corporate clients with motion graphics and sound design.</p>
-                            <div class="project-tags">
-                                <span class="tag">Video Editing</span>
-                                <span class="tag">Animation</span>
-                            </div>
-                            <div class="project-btn">
-                                <a href="#" class="btn">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 10 -->
-                    <div class="project-card">
-                        <img src="card10.jpg" alt="Email Marketing" class="project-img" loading="lazy">
-                        <div class="project-info">
-                            <h3>Email Marketing Campaign</h3>
-                            <p>Email marketing campaign design with responsive templates and performance tracking.</p>
-                            <div class="project-tags">
-                                <span class="tag">Email Marketing</span>
-                                <span class="tag">Automation</span>
-                            </div>
-                            <div class="project-btn">
-                                <a href="#" class="btn">View Project</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1785,101 +1402,6 @@
             }
         }
 
-        // Simple Projects Carousel with Auto-Scroll and Manual Controls
-        class SimpleCarousel {
-            constructor() {
-                this.container = document.getElementById('carouselContainer');
-                this.track = document.getElementById('projectsCarousel');
-                this.isDragging = false;
-                this.startX = 0;
-                this.scrollLeft = 0;
-                
-                this.init();
-            }
-            
-            init() {
-                this.setupEventListeners();
-            }
-            
-            setupEventListeners() {
-                // Mouse drag events
-                if (this.track) {
-                    this.track.addEventListener('mousedown', (e) => this.startDrag(e));
-                    this.track.addEventListener('mousemove', (e) => this.drag(e));
-                    this.track.addEventListener('mouseup', () => this.endDrag());
-                    this.track.addEventListener('mouseleave', () => this.endDrag());
-                    
-                    // Touch events for mobile
-                    this.track.addEventListener('touchstart', (e) => this.startDrag(e.touches[0]));
-                    this.track.addEventListener('touchmove', (e) => this.drag(e.touches[0]));
-                    this.track.addEventListener('touchend', () => this.endDrag());
-                    
-                    // Wheel scroll
-                    this.track.addEventListener('wheel', (e) => this.handleWheel(e));
-                }
-            }
-            
-            startDrag(e) {
-                this.isDragging = true;
-                this.startX = e.pageX - this.track.offsetLeft;
-                this.scrollLeft = this.getCurrentScroll();
-                this.track.style.cursor = 'grabbing';
-                this.track.style.animationPlayState = 'paused';
-                this.track.style.transition = 'none';
-            }
-            
-            drag(e) {
-                if (!this.isDragging) return;
-                e.preventDefault();
-                
-                const x = e.pageX - this.track.offsetLeft;
-                const walk = (x - this.startX) * 1.5;
-                
-                this.track.style.transform = `translateX(${this.scrollLeft - walk}px)`;
-            }
-            
-            endDrag() {
-                this.isDragging = false;
-                this.track.style.cursor = 'grab';
-                this.track.style.animationPlayState = 'running';
-                this.track.style.transition = 'transform 0.3s ease';
-                
-                // Reset to auto-scroll if at boundaries
-                setTimeout(() => {
-                    if (!this.isDragging) {
-                        this.track.style.animationPlayState = 'running';
-                    }
-                }, 300);
-            }
-            
-            handleWheel(e) {
-                e.preventDefault();
-                this.track.style.animationPlayState = 'paused';
-                
-                const delta = e.deltaY > 0 ? 50 : -50;
-                const currentScroll = this.getCurrentScroll();
-                const newScroll = currentScroll - delta;
-                
-                this.track.style.transform = `translateX(${newScroll}px)`;
-                
-                // Resume auto-scroll after wheel stops
-                clearTimeout(this.wheelTimeout);
-                this.wheelTimeout = setTimeout(() => {
-                    if (!this.isDragging) {
-                        this.track.style.animationPlayState = 'running';
-                    }
-                }, 500);
-            }
-            
-            getCurrentScroll() {
-                const transform = this.track.style.transform;
-                if (!transform || transform === 'none') return 0;
-                
-                const match = transform.match(/translateX\(([-]?\d+)px\)/);
-                return match ? parseInt(match[1]) : 0;
-            }
-        }
-
         // Mobile Menu Toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const mobileMenu = document.querySelector('.mobile-menu');
@@ -2034,7 +1556,6 @@
             createEnhancedStars();
             createParticles();
             new CreativeDNA();
-            new SimpleCarousel();
             
             // Mobile detection for hero animation
             if (window.innerWidth <= 768) {
