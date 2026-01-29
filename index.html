@@ -361,100 +361,249 @@
             animation: fadeInRight 1s 1s forwards;
         }
 
-        /* ===== CREATIVE DNA SECTION ===== */
+        /* ===== NEW TECH DNA SECTION ===== */
         #creative-dna {
             background: rgba(2, 6, 23, 0.7);
             padding: 100px 0;
         }
 
-        .dna-container {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 40px;
-            max-width: 1000px;
+        .dna-wrapper {
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        .dna-left {
-            width: 500px;
-            height: 580px;
+        /* Tech DNA Header */
+        .tech-dna-header {
+            text-align: left;
+            margin-bottom: 60px;
+        }
+
+        .tech-dna-header h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 15px;
+            text-align: left;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .tech-dna-header h2:after {
+            left: 0;
+            transform: none;
+        }
+
+        .tech-dna-header p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 600px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        /* Tech DNA Container */
+        .tech-dna-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .dna-container {
             background: rgba(15, 23, 42, 0.9);
             border-radius: 20px;
-            padding: 25px;
-            border: 1px solid rgba(148, 163, 184, 0.2);
+            padding: 30px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
             position: relative;
             overflow: hidden;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 0.8s ease 0.4s both;
         }
 
         .dna-header {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             text-align: center;
         }
 
-        .dna-header h2 {
-            font-size: 2rem;
-            text-align: center;
-            margin-bottom: 8px;
+        .dna-header h3 {
+            font-size: 2.2rem;
             color: var(--primary);
+            margin-bottom: 10px;
         }
 
         .dna-header p {
             color: var(--gray);
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         .dna-category {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            position: relative;
         }
 
         .category-title {
-            font-size: 1rem;
-            font-weight: 600;
+            font-size: 1.1rem;
+            font-weight: 700;
             color: var(--primary);
-            margin-bottom: 12px;
-            padding-left: 10px;
-            border-left: 3px solid var(--primary);
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 4px solid var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .category-title i {
+            font-size: 1.2rem;
         }
 
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
+            gap: 12px;
+            position: relative;
+            z-index: 10;
         }
 
+        /* DNA Bubbles with Custom Sizes */
         .dna-bubble {
-            background: rgba(30, 41, 59, 0.8);
+            background: rgba(30, 41, 59, 0.9);
             border-radius: 50px;
-            padding: 10px 12px;
+            padding: 12px 15px;
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
             border: 2px solid transparent;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             white-space: normal;
             word-wrap: break-word;
-            line-height: 1.2;
-            min-height: 45px;
+            line-height: 1.3;
+            min-height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: var(--light);
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Custom sizes for each skill based on data-id */
+        .dna-bubble[data-id="1"] { /* Campaign Setup & Management */
+            min-height: 60px;
+            padding: 14px 18px;
+            font-size: 0.95rem;
+            background: rgba(30, 41, 59, 0.95);
+        }
+        .dna-bubble[data-id="2"] { /* Conversion Optimization */
+            min-height: 55px;
+            padding: 13px 16px;
+            font-size: 0.93rem;
+            background: rgba(30, 50, 70, 0.92);
+        }
+        .dna-bubble[data-id="3"] { /* Audience Targeting */
+            min-height: 50px;
+            padding: 12px 15px;
+            font-size: 0.92rem;
+            background: rgba(35, 45, 65, 0.9);
+        }
+        .dna-bubble[data-id="4"] { /* Google Ads */
+            min-height: 50px;
+            padding: 12px 15px;
+            font-size: 0.94rem;
+            background: rgba(30, 55, 75, 0.93);
+        }
+        .dna-bubble[data-id="5"] { /* Funnel Building */
+            min-height: 58px;
+            padding: 14px 17px;
+            font-size: 0.94rem;
+            background: rgba(35, 50, 70, 0.94);
+        }
+        .dna-bubble[data-id="6"] { /* Budget & ROAS Management */
+            min-height: 65px;
+            padding: 15px 20px;
+            font-size: 0.96rem;
+            background: rgba(40, 55, 80, 0.96);
+        }
+        .dna-bubble[data-id="7"] { /* A/B Testing */
+            min-height: 48px;
+            padding: 11px 14px;
+            font-size: 0.91rem;
+            background: rgba(30, 45, 65, 0.88);
+        }
+        .dna-bubble[data-id="8"] { /* Performance Tracking */
+            min-height: 56px;
+            padding: 13px 16px;
+            font-size: 0.93rem;
+            background: rgba(35, 50, 75, 0.92);
+        }
+        .dna-bubble[data-id="9"] { /* Motion Graphics */
+            min-height: 52px;
+            padding: 12px 16px;
+            font-size: 0.92rem;
+            background: rgba(75, 45, 90, 0.93);
+        }
+        .dna-bubble[data-id="10"] { /* Visual Effects (VFX) */
+            min-height: 58px;
+            padding: 14px 18px;
+            font-size: 0.94rem;
+            background: rgba(80, 45, 95, 0.95);
+        }
+        .dna-bubble[data-id="11"] { /* Color Correction */
+            min-height: 50px;
+            padding: 12px 15px;
+            font-size: 0.91rem;
+            background: rgba(70, 45, 85, 0.9);
+        }
+        .dna-bubble[data-id="12"] { /* Transitions & Effects */
+            min-height: 54px;
+            padding: 13px 17px;
+            font-size: 0.93rem;
+            background: rgba(75, 50, 90, 0.92);
+        }
+        .dna-bubble[data-id="13"] { /* Social Media Content */
+            min-height: 62px;
+            padding: 14px 19px;
+            font-size: 0.95rem;
+            background: rgba(90, 55, 100, 0.96);
+        }
+        .dna-bubble[data-id="14"] { /* Attractive Hooks */
+            min-height: 50px;
+            padding: 12px 15px;
+            font-size: 0.92rem;
+            background: rgba(85, 50, 95, 0.9);
+        }
+        .dna-bubble[data-id="15"] { /* Shopify Optimization */
+            min-height: 56px;
+            padding: 13px 17px;
+            font-size: 0.94rem;
+            background: rgba(95, 60, 105, 0.94);
         }
 
         .dna-bubble:hover {
             background: rgba(16, 185, 129, 0.15);
             border-color: var(--primary);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.2);
         }
 
         .dna-bubble.active {
             background: rgba(16, 185, 129, 0.2);
             border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+            animation: pulse 1.5s infinite;
         }
 
-        #connection-lines {
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.5); }
+        }
+
+        /* Permanent Lines */
+        .permanent-lines {
             position: absolute;
             top: 0;
             left: 0;
@@ -464,25 +613,49 @@
             z-index: 1;
         }
 
-        .connection-line {
-            stroke: #10B981;
+        .permanent-line {
+            stroke: rgba(16, 185, 129, 0.5);
             stroke-width: 2;
-            stroke-dasharray: 5,3;
+            fill: none;
+            animation: moveLine 20s linear infinite;
+            stroke-dasharray: 10, 10;
+        }
+
+        @keyframes moveLine {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: 1000; }
+        }
+
+        #connection-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .connection-line {
+            stroke: var(--primary);
+            stroke-width: 3;
+            stroke-dasharray: 5, 3;
             fill: none;
             transition: all 0.3s ease;
+            filter: drop-shadow(0 0 4px var(--primary));
         }
 
         .connection-point {
             position: absolute;
-            width: 8px;
-            height: 8px;
+            width: 10px;
+            height: 10px;
             background: var(--primary);
             border-radius: 50%;
             transform: translate(-50%, -50%);
-            z-index: 2;
+            z-index: 6;
             opacity: 0;
             transition: opacity 0.3s ease;
-            box-shadow: 0 0 8px var(--primary);
+            box-shadow: 0 0 12px var(--primary);
         }
 
         .connection-point.active {
@@ -492,17 +665,89 @@
 
         @keyframes pulsePoint {
             0%, 100% { transform: translate(-50%, -50%) scale(1); }
-            50% { transform: translate(-50%, -50%) scale(1.3); }
+            50% { transform: translate(-50%, -50%) scale(1.4); }
         }
 
-        .dna-right {
-            width: 400px;
-            height: 580px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
+        /* Desktop specific sizes */
+        @media (min-width: 769px) {
+            .dna-bubble[data-id="1"] {
+                min-height: 65px;
+                padding: 16px 20px;
+                font-size: 1rem;
+            }
+            .dna-bubble[data-id="2"] {
+                min-height: 60px;
+                padding: 15px 18px;
+                font-size: 0.98rem;
+            }
+            .dna-bubble[data-id="3"] {
+                min-height: 55px;
+                padding: 14px 17px;
+                font-size: 0.95rem;
+            }
+            .dna-bubble[data-id="4"] {
+                min-height: 55px;
+                padding: 14px 17px;
+                font-size: 0.96rem;
+            }
+            .dna-bubble[data-id="5"] {
+                min-height: 63px;
+                padding: 16px 19px;
+                font-size: 0.98rem;
+            }
+            .dna-bubble[data-id="6"] {
+                min-height: 70px;
+                padding: 17px 22px;
+                font-size: 1rem;
+            }
+            .dna-bubble[data-id="7"] {
+                min-height: 53px;
+                padding: 13px 16px;
+                font-size: 0.93rem;
+            }
+            .dna-bubble[data-id="8"] {
+                min-height: 61px;
+                padding: 15px 18px;
+                font-size: 0.96rem;
+            }
+            .dna-bubble[data-id="9"] {
+                min-height: 57px;
+                padding: 14px 18px;
+                font-size: 0.95rem;
+            }
+            .dna-bubble[data-id="10"] {
+                min-height: 63px;
+                padding: 16px 20px;
+                font-size: 0.98rem;
+            }
+            .dna-bubble[data-id="11"] {
+                min-height: 55px;
+                padding: 14px 17px;
+                font-size: 0.93rem;
+            }
+            .dna-bubble[data-id="12"] {
+                min-height: 59px;
+                padding: 15px 19px;
+                font-size: 0.96rem;
+            }
+            .dna-bubble[data-id="13"] {
+                min-height: 68px;
+                padding: 16px 21px;
+                font-size: 0.98rem;
+            }
+            .dna-bubble[data-id="14"] {
+                min-height: 55px;
+                padding: 14px 17px;
+                font-size: 0.94rem;
+            }
+            .dna-bubble[data-id="15"] {
+                min-height: 61px;
+                padding: 15px 19px;
+                font-size: 0.97rem;
+            }
         }
 
+        /* Video Container */
         .video-container {
             width: 100%;
             height: 500px;
@@ -510,7 +755,8 @@
             overflow: hidden;
             border: none;
             background: transparent;
-            margin-top: 0;
+            margin-top: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .video-player {
@@ -518,7 +764,6 @@
             height: 100%;
             object-fit: cover;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         /* ===== ABOUT SECTION ===== */
@@ -719,41 +964,16 @@
             }
         }
 
+        @keyframes floatStar {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
+            50% { transform: translateY(-20px) scale(1.2); opacity: 1; }
+        }
+
         /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 1100px) {
-            .dna-container {
-                flex-direction: column;
-                align-items: center;
-                max-width: 500px;
-            }
-            
-            .dna-left {
-                width: 480px;
-                height: 600px;
-                padding: 22px;
-            }
-            
-            .dna-right {
-                width: 480px;
-                height: 500px;
-            }
-            
-            .video-container {
-                height: 450px;
-            }
-            
             .skills-grid {
-                gap: 8px;
-            }
-            
-            .dna-bubble {
-                font-size: 0.8rem;
-                padding: 9px 11px;
-                min-height: 42px;
-            }
-            
-            .category-title {
-                font-size: 0.9rem;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
             }
         }
 
@@ -796,66 +1016,128 @@
                 background: rgba(16, 185, 129, 0.1);
             }
         
-           /* MOBILE HERO FIX - PICTURE TOP, TEXT BOTTOM */
-@media (max-width: 768px) {
-    #hero .hero-content {
-        display: flex !important;
-        flex-direction: column !important;
-    }
-    #hero .hero-image {
-        order: 1 !important;
-        margin-bottom: 30px;
-    }
-    #hero .hero-text {
-        order: 2 !important;
-    }
-}
+            /* MOBILE HERO FIX - PICTURE TOP, TEXT BOTTOM */
+            @media (max-width: 768px) {
+                #hero .hero-content {
+                    display: flex !important;
+                    flex-direction: column !important;
+                }
+                #hero .hero-image {
+                    order: 1 !important;
+                    margin-bottom: 30px;
+                }
+                #hero .hero-text {
+                    order: 2 !important;
+                }
+            }
             
             /* MOBILE DNA */
-            .dna-left {
-                width: 100%;
-                max-width: 350px;
-                height: 500px;
+            .tech-dna-header h2 {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+            
+            .tech-dna-header h2:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .tech-dna-header p {
+                text-align: center;
+            }
+            
+            .dna-container {
                 padding: 20px;
             }
             
-            .dna-right {
-                width: 100%;
-                max-width: 350px;
-                height: 400px;
-            }
-            
-            .video-container {
-                height: 350px;
+            .dna-header h3 {
+                font-size: 1.8rem;
             }
             
             .skills-grid {
                 grid-template-columns: repeat(3, 1fr);
-                gap: 8px;
             }
             
-            .dna-bubble {
-                font-size: 0.75rem;
-                padding: 8px 10px;
-                min-height: 40px;
-                line-height: 1.1;
+            /* Mobile specific sizes */
+            .dna-bubble[data-id="1"] {
+                min-height: 55px;
+                padding: 12px 16px;
+                font-size: 0.88rem;
             }
-            
-            .category-title {
+            .dna-bubble[data-id="2"] {
+                min-height: 52px;
+                padding: 11px 14px;
+                font-size: 0.86rem;
+            }
+            .dna-bubble[data-id="3"] {
+                min-height: 48px;
+                padding: 10px 13px;
                 font-size: 0.85rem;
-                margin-bottom: 10px;
             }
-            
-            .dna-category {
-                margin-bottom: 20px;
+            .dna-bubble[data-id="4"] {
+                min-height: 48px;
+                padding: 10px 13px;
+                font-size: 0.87rem;
             }
-            
-            .dna-header h2 {
-                font-size: 1.8rem;
+            .dna-bubble[data-id="5"] {
+                min-height: 53px;
+                padding: 12px 15px;
+                font-size: 0.87rem;
             }
-            
-            .dna-header p {
+            .dna-bubble[data-id="6"] {
+                min-height: 58px;
+                padding: 13px 18px;
+                font-size: 0.88rem;
+            }
+            .dna-bubble[data-id="7"] {
+                min-height: 45px;
+                padding: 9px 12px;
+                font-size: 0.83rem;
+            }
+            .dna-bubble[data-id="8"] {
+                min-height: 51px;
+                padding: 11px 14px;
+                font-size: 0.86rem;
+            }
+            .dna-bubble[data-id="9"] {
+                min-height: 49px;
+                padding: 10px 14px;
                 font-size: 0.85rem;
+            }
+            .dna-bubble[data-id="10"] {
+                min-height: 52px;
+                padding: 12px 16px;
+                font-size: 0.87rem;
+            }
+            .dna-bubble[data-id="11"] {
+                min-height: 47px;
+                padding: 10px 13px;
+                font-size: 0.84rem;
+            }
+            .dna-bubble[data-id="12"] {
+                min-height: 50px;
+                padding: 11px 15px;
+                font-size: 0.86rem;
+            }
+            .dna-bubble[data-id="13"] {
+                min-height: 56px;
+                padding: 13px 17px;
+                font-size: 0.88rem;
+            }
+            .dna-bubble[data-id="14"] {
+                min-height: 48px;
+                padding: 10px 13px;
+                font-size: 0.85rem;
+            }
+            .dna-bubble[data-id="15"] {
+                min-height: 52px;
+                padding: 12px 16px;
+                font-size: 0.87rem;
+            }
+            
+            .video-container {
+                height: 350px;
+                margin-top: 40px;
             }
             
             .about-content,
@@ -879,34 +1161,95 @@
                 height: 350px;
             }
             
-            .dna-left {
-                max-width: 320px;
-                height: 480px;
-                padding: 18px;
-            }
-            
-            .dna-right {
-                max-width: 320px;
-                height: 350px;
-            }
-            
-            .video-container {
-                height: 300px;
+            .tech-dna-header h2 {
+                font-size: 2rem;
             }
             
             .skills-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 6px;
+                grid-template-columns: repeat(0, 1fr)
+                
             }
             
-            .dna-bubble {
-                font-size: 0.7rem;
-                padding: 7px 9px;
-                min-height: 38px;
+            /* Extra small mobile sizes */
+            .dna-bubble[data-id="1"] {
+                min-height: 50px;
+                padding: 10px 14px;
+                font-size: 0.85rem;
             }
-            
-            .category-title {
+            .dna-bubble[data-id="2"] {
+                min-height: 48px;
+                padding: 10px 13px;
+                font-size: 0.84rem;
+            }
+            .dna-bubble[data-id="3"] {
+                min-height: 45px;
+                padding: 9px 12px;
+                font-size: 0.82rem;
+            }
+            .dna-bubble[data-id="4"] {
+                min-height: 45px;
+                padding: 9px 12px;
+                font-size: 0.84rem;
+            }
+            .dna-bubble[data-id="5"] {
+                min-height: 48px;
+                padding: 10px 14px;
+                font-size: 0.84rem;
+            }
+            .dna-bubble[data-id="6"] {
+                min-height: 55px;
+                padding: 12px 16px;
+                font-size: 0.86rem;
+            }
+            .dna-bubble[data-id="7"] {
+                min-height: 42px;
+                padding: 8px 11px;
                 font-size: 0.8rem;
+            }
+            .dna-bubble[data-id="8"] {
+                min-height: 47px;
+                padding: 10px 13px;
+                font-size: 0.83rem;
+            }
+            .dna-bubble[data-id="9"] {
+                min-height: 46px;
+                padding: 9px 13px;
+                font-size: 0.83rem;
+            }
+            .dna-bubble[data-id="10"] {
+                min-height: 48px;
+                padding: 10px 14px;
+                font-size: 0.84rem;
+            }
+            .dna-bubble[data-id="11"] {
+                min-height: 44px;
+                padding: 9px 12px;
+                font-size: 0.81rem;
+            }
+            .dna-bubble[data-id="12"] {
+                min-height: 47px;
+                padding: 10px 14px;
+                font-size: 0.83rem;
+            }
+            .dna-bubble[data-id="13"] {
+                min-height: 52px;
+                padding: 11px 15px;
+                font-size: 0.85rem;
+            }
+            .dna-bubble[data-id="14"] {
+                min-height: 45px;
+                padding: 9px 12px;
+                font-size: 0.82rem;
+            }
+            .dna-bubble[data-id="15"] {
+                min-height: 48px;
+                padding: 10px 14px;
+                font-size: 0.84rem;
+            }
+            
+            .video-container {
+                height: 250px;
+                margin-top: 30px;
             }
         }
     </style>
@@ -951,7 +1294,7 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <h1>Ali Talal</h1>
-                <div class="subtitle">  Content Creator Graphic Designer Digital Marketer</div>
+                <div class="subtitle">Content Creator Graphic Designer Digital Marketer</div>
                 <p>I'm Ali Talal, a content creator and freelancer specialized in digital marketing and graphic design. I completed my professional training from Next Gen Digital University. I'm passionate about creativity, learning by doing, and building a strong foundation in marketing and design.</p>
                 
                 <div class="hero-btns">
@@ -966,80 +1309,96 @@
         </div>
     </section>
 
-    <!-- Creative DNA Section -->
+    <!-- NEW Creative DNA Section -->
     <section id="creative-dna">
         <div class="container">
-            <h2>My Creative DNA</h2>
-            <div class="dna-container">
-                <!-- LEFT: DNA Grid -->
-                <div class="dna-left" id="dna-grid-container">
-                    <div class="dna-header">
-                        <h2>Creative Skills</h2>
-                        <p>Click on any skill to see connections</p>
-                    </div>
-                    
-                    <!-- Categories with Skills -->
-                    <div class="dna-categories">
-                        <!-- Design Tools -->
-                        <div class="dna-category">
-                            <div class="category-title">Design Tools</div>
-                            <div class="skills-grid">
-                                <div class="dna-bubble" data-id="1" data-skill="Photoshop">Photoshop</div>
-                                <div class="dna-bubble" data-id="2" data-skill="Illustrator">Illustrator</div>
-                            </div>
-                        </div>
-                        
-                        <!-- Branding & Strategy -->
-                        <div class="dna-category">
-                            <div class="category-title">Branding & Strategy</div>
-                            <div class="skills-grid">
-                                <div class="dna-bubble" data-id="3" data-skill="Branding">Branding</div>
-                                <div class="dna-bubble" data-id="4" data-skill="Marketing">Marketing</div>
-                                <div class="dna-bubble" data-id="5" data-skill="Copywriting">Copywriting</div>
-                                <div class="dna-bubble" data-id="6" data-skill="Logo Design">Logo Design</div>
-                            </div>
-                        </div>
-                        
-                        <!-- Digital Marketing -->
-                        <div class="dna-category">
-                            <div class="category-title">Digital Marketing</div>
-                            <div class="skills-grid">
-                                <div class="dna-bubble" data-id="7" data-skill="Meta Ads">Meta Ads</div>
-                                <div class="dna-bubble" data-id="8" data-skill="Audience Targeting">Audience Targeting</div>
-                                <div class="dna-bubble" data-id="9" data-skill="UI/UX Design">UI/UX Design</div>
-                            </div>
-                        </div>
-                        
-                        <!-- Visual Design -->
-                        <div class="dna-category">
-                            <div class="category-title">Visual Design</div>
-                            <div class="skills-grid">
-                                <div class="dna-bubble" data-id="10" data-skill="Typography">Typography</div>
-                                <div class="dna-bubble" data-id="11" data-skill="Color Theory">Color Theory</div>
-                                <div class="dna-bubble" data-id="12" data-skill="Layout Design">Layout Design</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Connection lines container -->
-                    <div id="connection-lines"></div>
+            <div class="dna-wrapper">
+                <div class="tech-dna-header">
+                    <h2>Tech DNA</h2>
+                    <p>Click on any skill to see connections and relationships between marketing and video editing skills.</p>
                 </div>
                 
-                <!-- RIGHT: Video Course -->
-                <div class="dna-right">
-                    <div class="video-container">
-                        <!-- Video with auto play, muted, loop - no controls, no poster -->
-                        <video class="video-player" autoplay muted loop playsinline>
-                            <source src="vid1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <div class="tech-dna-container">
+                    <div class="dna-container" id="dna-grid-container">
+                        <div class="dna-header">
+                            <h3>Marketing & Video Editing Skills</h3>
+                            <p>Click on any skill bubble to reveal connections</p>
+                        </div>
+                        
+                        <div class="dna-categories">
+                            <!-- Digital Marketing -->
+                            <div class="dna-category">
+                                <div class="category-title">
+                                    <i class="fas fa-bullseye"></i>
+                                    Digital Marketing
+                                </div>
+                                <div class="skills-grid">
+                                    <div class="dna-bubble" data-id="1" data-skill="Campaign Setup & Management">Campaign Setup & Management</div>
+                                    <div class="dna-bubble" data-id="2" data-skill="Conversion Optimization">Conversion Optimization</div>
+                                    <div class="dna-bubble" data-id="3" data-skill="Audience Targeting">Audience Targeting</div>
+                                    <div class="dna-bubble" data-id="4" data-skill="Google Ads">Google Ads</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Funnel & Analytics -->
+                            <div class="dna-category">
+                                <div class="category-title">
+                                    <i class="fas fa-chart-line"></i>
+                                    Funnel & Analytics
+                                </div>
+                                <div class="skills-grid">
+                                    <div class="dna-bubble" data-id="5" data-skill="Funnel Building">Funnel Building</div>
+                                    <div class="dna-bubble" data-id="6" data-skill="Budget & ROAS Management">Budget & ROAS Management</div>
+                                    <div class="dna-bubble" data-id="7" data-skill="A/B Testing">A/B Testing</div>
+                                    <div class="dna-bubble" data-id="8" data-skill="Performance Tracking">Performance Tracking</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Video Editing -->
+                            <div class="dna-category">
+                                <div class="category-title">
+                                    <i class="fas fa-video"></i>
+                                    Video Editing
+                                </div>
+                                <div class="skills-grid">
+                                    <div class="dna-bubble" data-id="9" data-skill="Motion Graphics">Motion Graphics</div>
+                                    <div class="dna-bubble" data-id="10" data-skill="Visual Effects (VFX)">Visual Effects (VFX)</div>
+                                    <div class="dna-bubble" data-id="11" data-skill="Color Correction">Color Correction</div>
+                                    <div class="dna-bubble" data-id="12" data-skill="Transitions & Effects">Transitions & Effects</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Content & E-commerce -->
+                            <div class="dna-category">
+                                <div class="category-title">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Content & E-commerce
+                                </div>
+                                <div class="skills-grid">
+                                    <div class="dna-bubble" data-id="13" data-skill="Social Media Content">Social Media Content</div>
+                                    <div class="dna-bubble" data-id="14" data-skill="Attractive Hooks">Attractive Hooks</div>
+                                    <div class="dna-bubble" data-id="15" data-skill="Shopify Optimization">Shopify Optimization</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="permanent-lines" id="permanent-lines"></div>
+                        <div id="connection-lines"></div>
                     </div>
+                </div>
+
+                <!-- Video Container -->
+                <div class="video-container">
+                    <video class="video-player" autoplay muted loop playsinline>
+                        <source src="vid1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--About section-->
+    <!-- About section -->
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
@@ -1225,38 +1584,123 @@
             }
         }
 
-        // Creative DNA Connections System
-        class CreativeDNA {
+        // NEW TECH DNA CLASS
+        class TechDNA {
             constructor() {
                 this.bubbles = document.querySelectorAll('.dna-bubble');
+                this.permanentLinesContainer = document.getElementById('permanent-lines');
                 this.connectionsContainer = document.getElementById('connection-lines');
                 this.activeBubble = null;
                 this.connections = [];
+                this.allBubbles = [];
                 
                 this.init();
             }
             
             init() {
+                this.getAllBubblePositions();
+                this.createPermanentLines();
                 this.createConnections();
                 this.setupEventListeners();
+                this.createFloatingEffects();
+            }
+            
+            getAllBubblePositions() {
+                this.allBubbles = Array.from(this.bubbles).map(bubble => {
+                    const rect = bubble.getBoundingClientRect();
+                    const containerRect = this.permanentLinesContainer.getBoundingClientRect();
+                    return {
+                        element: bubble,
+                        id: parseInt(bubble.dataset.id),
+                        x: rect.left + rect.width/2 - containerRect.left,
+                        y: rect.top + rect.height/2 - containerRect.top
+                    };
+                });
+            }
+            
+            createPermanentLines() {
+                const svgNS = "http://www.w3.org/2000/svg";
+                const svg = document.createElementNS(svgNS, "svg");
+                svg.setAttribute("width", "100%");
+                svg.setAttribute("height", "100%");
+                svg.style.position = "absolute";
+                svg.style.top = "0";
+                svg.style.left = "0";
+                svg.style.pointerEvents = "none";
+                svg.style.zIndex = "1";
+                svg.style.opacity = "0.5";
+                
+                const lineCount = 15;
+                for (let i = 0; i < lineCount; i++) {
+                    const startX = Math.random() * 100;
+                    const startY = Math.random() * 100;
+                    const endX = Math.random() * 100;
+                    const endY = Math.random() * 100;
+                    
+                    const path = document.createElementNS(svgNS, "path");
+                    path.setAttribute("d", 
+                        `M ${startX}%,${startY}% C ${(startX + endX)/2}%,${startY}% ${(startX + endX)/2}%,${endY}% ${endX}%,${endY}%`
+                    );
+                    path.setAttribute("fill", "none");
+                    path.setAttribute("stroke", "#10B981");
+                    path.setAttribute("stroke-width", "1.5");
+                    path.setAttribute("stroke-dasharray", "10,10");
+                    path.classList.add("permanent-line");
+                    
+                    const duration = 15 + Math.random() * 15;
+                    path.style.animationDuration = `${duration}s`;
+                    path.style.animationDelay = `${Math.random() * 5}s`;
+                    
+                    svg.appendChild(path);
+                }
+                
+                this.allBubbles.forEach((bubble1, i) => {
+                    if (i % 3 === 0) {
+                        this.allBubbles.slice(i + 1).forEach(bubble2 => {
+                            if (Math.random() > 0.7) {
+                                const line = document.createElementNS(svgNS, "line");
+                                line.setAttribute("x1", `${bubble1.x}px`);
+                                line.setAttribute("y1", `${bubble1.y}px`);
+                                line.setAttribute("x2", `${bubble2.x}px`);
+                                line.setAttribute("y2", `${bubble2.y}px`);
+                                line.setAttribute("stroke", "rgba(16, 185, 129, 0.3)");
+                                line.setAttribute("stroke-width", "1");
+                                line.setAttribute("stroke-dasharray", "5,5");
+                                line.style.animation = `moveLine ${20 + Math.random() * 10}s linear infinite`;
+                                line.style.animationDelay = `${Math.random() * 3}s`;
+                                svg.appendChild(line);
+                            }
+                        });
+                    }
+                });
+                
+                this.permanentLinesContainer.appendChild(svg);
             }
             
             createConnections() {
                 this.connections = [
-                    { from: 1, to: 2, label: "Design Suite" },
-                    { from: 1, to: 6, label: "Logo Design" },
-                    { from: 1, to: 12, label: "Layout" },
-                    { from: 2, to: 10, label: "Typography" },
-                    { from: 2, to: 11, label: "Color" },
-                    { from: 3, to: 4, label: "Strategy" },
-                    { from: 3, to: 6, label: "Identity" },
-                    { from: 4, to: 5, label: "Content" },
-                    { from: 4, to: 7, label: "Digital" },
-                    { from: 5, to: 7, label: "Ads" },
-                    { from: 5, to: 8, label: "Targeting" },
-                    { from: 9, to: 10, label: "Type" },
-                    { from: 9, to: 11, label: "Colors" },
-                    { from: 9, to: 12, label: "Layout" },
+                    { from: 1, to: 2, label: "Optimize", color: "#10B981" },
+                    { from: 1, to: 3, label: "Target", color: "#059669" },
+                    { from: 1, to: 4, label: "Execute", color: "#10B981" },
+                    { from: 2, to: 7, label: "Test", color: "#6C63FF" },
+                    { from: 3, to: 6, label: "ROAS", color: "#059669" },
+                    { from: 4, to: 5, label: "Funnel", color: "#10B981" },
+                    
+                    { from: 5, to: 8, label: "Track", color: "#059669" },
+                    { from: 6, to: 8, label: "Analyze", color: "#6C63FF" },
+                    { from: 7, to: 8, label: "Results", color: "#10B981" },
+                    
+                    { from: 9, to: 10, label: "VFX", color: "#FF6B9D" },
+                    { from: 9, to: 12, label: "Effects", color: "#FFA726" },
+                    { from: 10, to: 11, label: "Color", color: "#66BB6A" },
+                    { from: 11, to: 12, label: "Transitions", color: "#FF6B9D" },
+                    
+                    { from: 13, to: 14, label: "Hooks", color: "#8E44AD" },
+                    { from: 9, to: 13, label: "Content", color: "#FF6B9D" },
+                    { from: 5, to: 15, label: "Shopify", color: "#95A5A6" },
+                    { from: 2, to: 15, label: "Convert", color: "#10B981" },
+                    { from: 13, to: 1, label: "Campaign", color: "#8E44AD" },
+                    { from: 14, to: 13, label: "Engage", color: "#8E44AD" },
                 ];
             }
             
@@ -1305,7 +1749,7 @@
                     const toBubble = document.querySelector(`.dna-bubble[data-id="${conn.to}"]`);
                     
                     if (fromBubble && toBubble) {
-                        this.drawConnection(fromBubble, toBubble, conn.label);
+                        this.drawConnection(fromBubble, toBubble, conn.label, conn.color);
                         
                         if (conn.from === bubbleId) {
                             toBubble.classList.add('active');
@@ -1316,7 +1760,7 @@
                 });
             }
             
-            drawConnection(fromBubble, toBubble, label) {
+            drawConnection(fromBubble, toBubble, label, color) {
                 const fromRect = fromBubble.getBoundingClientRect();
                 const toRect = toBubble.getBoundingClientRect();
                 const containerRect = this.connectionsContainer.getBoundingClientRect();
@@ -1334,7 +1778,7 @@
                 svg.style.top = "0";
                 svg.style.left = "0";
                 svg.style.pointerEvents = "none";
-                svg.style.zIndex = "1";
+                svg.style.zIndex = "5";
                 
                 const path = document.createElementNS(svgNS, "path");
                 const midX = (fromX + toX) / 2;
@@ -1347,10 +1791,11 @@
                     `M ${fromX},${fromY} Q ${controlX},${controlY} ${toX},${toY}`
                 );
                 path.setAttribute("fill", "none");
-                path.setAttribute("stroke", "#10B981");
-                path.setAttribute("stroke-width", "2");
-                path.setAttribute("stroke-dasharray", "5,3");
+                path.setAttribute("stroke", color);
+                path.setAttribute("stroke-width", "3");
+                path.setAttribute("stroke-dasharray", "6,4");
                 path.classList.add("connection-line");
+                path.style.filter = `drop-shadow(0 0 6px ${color})`;
                 
                 const length = path.getTotalLength();
                 path.style.strokeDasharray = length + ' ' + length;
@@ -1364,8 +1809,8 @@
                     path.style.strokeDashoffset = '0';
                 }, 10);
                 
-                this.createConnectionPoint(fromX, fromY);
-                this.createConnectionPoint(toX, toY);
+                this.createConnectionPoint(fromX, fromY, color);
+                this.createConnectionPoint(toX, toY, color);
                 
                 const text = document.createElementNS(svgNS, "text");
                 const labelX = (fromX + controlX + toX) / 3;
@@ -1374,19 +1819,22 @@
                 text.setAttribute("x", labelX);
                 text.setAttribute("y", labelY);
                 text.setAttribute("text-anchor", "middle");
-                text.setAttribute("fill", "#10B981");
-                text.setAttribute("font-size", "9");
-                text.setAttribute("font-weight", "600");
+                text.setAttribute("fill", color);
+                text.setAttribute("font-size", "10");
+                text.setAttribute("font-weight", "700");
                 text.setAttribute("dy", "3");
+                text.setAttribute("filter", `drop-shadow(0 0 3px ${color})`);
                 text.textContent = label;
                 svg.appendChild(text);
             }
             
-            createConnectionPoint(x, y) {
+            createConnectionPoint(x, y, color) {
                 const point = document.createElement('div');
                 point.className = 'connection-point active';
                 point.style.left = `${x}px`;
                 point.style.top = `${y}px`;
+                point.style.background = color;
+                point.style.boxShadow = `0 0 15px ${color}`;
                 this.connectionsContainer.appendChild(point);
             }
             
@@ -1399,6 +1847,32 @@
                 
                 lines.forEach(line => line.remove());
                 points.forEach(point => point.remove());
+            }
+            
+            createFloatingEffects() {
+                for (let i = 0; i < 8; i++) {
+                    const star = document.createElement('div');
+                    star.style.cssText = `
+                        position: absolute;
+                        width: 3px;
+                        height: 3px;
+                        background: var(--primary);
+                        border-radius: 50%;
+                        filter: blur(1px);
+                        animation: floatStar 4s ease-in-out infinite;
+                        z-index: 0;
+                        pointer-events: none;
+                    `;
+                    
+                    const x = Math.random() * 90 + 5;
+                    const y = Math.random() * 90 + 5;
+                    star.style.left = `${x}%`;
+                    star.style.top = `${y}%`;
+                    star.style.animationDelay = `${Math.random() * 3}s`;
+                    star.style.opacity = `${0.2 + Math.random() * 0.3}`;
+                    
+                    document.querySelector('.dna-container').appendChild(star);
+                }
             }
         }
 
@@ -1555,7 +2029,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             createEnhancedStars();
             createParticles();
-            new CreativeDNA();
+            new TechDNA(); // NEW TECH DNA INSTANCE
             
             // Mobile detection for hero animation
             if (window.innerWidth <= 768) {
@@ -1570,6 +2044,27 @@
                     el.style.animationDelay = `${0.5 + index * 0.2}s`;
                 });
             }
+
+            // Handle resizing for DNA
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    const techDNA = window.techDNA;
+                    if (techDNA) {
+                        techDNA.clearAllConnections();
+                        const linesContainer = document.querySelector('#permanent-lines');
+                        if (linesContainer) {
+                            linesContainer.innerHTML = '';
+                        }
+                        techDNA.getAllBubblePositions();
+                        techDNA.createPermanentLines();
+                    }
+                }, 250);
+            });
+
+            // Make TechDNA globally accessible
+            window.techDNA = new TechDNA();
         });
 
         // Handle image loading errors
@@ -1587,4 +2082,4 @@
         }, true);
     </script>
 </body>
-</html>
+</html>s
