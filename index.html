@@ -708,6 +708,266 @@
             transform: scaleX(1);
         }
 
+        /* ===== EXPERIENCE SECTION ===== */
+        #experience {
+            background: rgba(2, 6, 23, 0.7);
+            padding: 60px 0;
+        }
+
+        .experience-container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .experience-grid {
+            display: grid;
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .experience-card {
+            background: rgba(15, 23, 42, 0.8);
+            border-radius: 10px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .experience-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+
+        .company-info h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--light);
+            margin-bottom: 0.2rem;
+        }
+
+        .company-info .position {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            text-shadow: 0 0 5px rgba(16, 185, 129, 0.5);
+        }
+
+        .date-badge {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            text-shadow: 0 0 3px rgba(16, 185, 129, 0.5);
+        }
+
+        /* Tags Row - OUTSIDE CARD */
+        .tags-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(16, 185, 129, 0.4);
+        }
+
+        .tag {
+            background: rgba(16, 185, 129, 0.08);
+            color: var(--primary);
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            text-shadow: 0 0 2px rgba(16, 185, 129, 0.5);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            opacity: 1;
+            background: rgba(16, 185, 129, 0.15);
+            transform: translateY(-1px);
+        }
+
+        /* Expand Button */
+        .expand-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            background: none;
+            border: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-top: 1rem;
+            padding: 0.4rem 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 3px rgba(16, 185, 129, 0.5);
+        }
+
+        .expand-btn:hover {
+            color: var(--light);
+            text-shadow: 0 0 5px var(--primary);
+        }
+
+        .expand-btn i {
+            transition: transform 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .expand-btn.expanded i {
+            transform: rotate(180deg);
+        }
+
+        /* Expanded Content */
+        .expanded-content {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.5s ease;
+            margin-top: 0;
+        }
+
+        .expanded-content.show {
+            max-height: 2000px;
+            opacity: 1;
+            margin-top: 1rem;
+            padding-top: 1rem;
+        }
+
+        .expanded-section {
+            margin-bottom: 1.25rem;
+        }
+
+        .expanded-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .expanded-section h4 {
+            color: var(--primary);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            text-shadow: 0 0 3px rgba(16, 185, 129, 0.5);
+        }
+
+        /* Intro Text (Now Inside Expanded Content) */
+        .intro-text {
+            color: #E2E8F0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .key-contributions {
+            list-style: none;
+        }
+
+        .key-contributions li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #E2E8F0;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .key-contributions li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-size: 1rem;
+            text-shadow: 0 0 5px rgba(16, 185, 129, 0.5);
+            font-weight: bold;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            margin-top: 1rem;
+        }
+
+        .skills-section h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skills-tags .tag {
+            background: rgba(16, 185, 129, 0.05);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        /* Responsive for Experience Section */
+        @media (max-width: 768px) {
+            .experience-container {
+                padding: 0 10px;
+            }
+            
+            .card-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .date-badge {
+                align-self: flex-start;
+            }
+            
+            .experience-card {
+                padding: 1.25rem;
+            }
+            
+            .company-info h3 {
+                font-size: 1.2rem;
+            }
+            
+            .tags-row {
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tags-row, .skills-tags {
+                gap: 0.4rem;
+            }
+            
+            .tag {
+                font-size: 0.8rem;
+                padding: 0.35rem 0.8rem;
+            }
+            
+            .intro-text {
+                font-size: 0.9rem;
+            }
+        }
+
         /* ===== CERTIFICATIONS SECTION ===== */
         #certifications {
             background: rgba(2, 6, 23, 0.7);
@@ -1511,6 +1771,7 @@
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#creative-dna">Creative DNA</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -1524,6 +1785,7 @@
             <a href="#hero">Home</a>
             <a href="#creative-dna">Creative DNA</a>
             <a href="#about">About</a>
+            <a href="#experience">Experience</a>
             <a href="#certifications">Certifications</a>
             <a href="#contact">Contact</a>
         </div>
@@ -1709,7 +1971,219 @@
         </div>
     </section>
 
-    <!-- NEW: Certifications Section -->
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <p class="section-subtitle">My professional journey and work experience</p>
+            
+            <div class="experience-grid">
+                
+                <!-- Card 1: FUTURLERN -->
+                <div class="experience-card" data-card="1">
+                    <div class="card-header">
+                        <div class="company-info">
+                            <h3>FUTURLERN</h3>
+                            <div class="position">VIDEO EDITOR & MARKETER</div>
+                        </div>
+                        <div class="date-badge">02/06/2025 - Current</div>
+                    </div>
+                    
+                    <!-- Tags OUTSIDE (visible when collapsed) -->
+                    <div class="tags-row">
+                        <span class="tag">Adobe Premiere Pro</span>
+                        <span class="tag">After Effects</span>
+                        <span class="tag">CapCut</span>
+                        <span class="tag">Content Strategy</span>
+                    </div>
+                    
+                    <button class="expand-btn" onclick="toggleExpand(1)">
+                        Click to expand
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="expanded-content" id="expanded-1">
+                        <!-- Intro Text INSIDE (visible when expanded) -->
+                        <div class="intro-text">
+                            Engineered high-impact video content driving audience growth and brand visibility. 
+                            Transitioned from digital marketer to lead video editor delivering engagement-focused content.
+                        </div>
+                        
+                        <div class="expanded-section">
+                            <h4>Key Contributions:</h4>
+                            <ul class="key-contributions">
+                                <li>Produced and optimized video content boosting audience retention by 40%</li>
+                                <li>Designed high-conversion video creatives increasing engagement rates</li>
+                                <li>Applied trend analysis to maximize visibility and algorithm reach</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skills-section">
+                            <h4>Skills:</h4>
+                            <div class="skills-tags">
+                                <span class="tag">Social Media Analytics</span>
+                                <span class="tag">Video Production</span>
+                                <span class="tag">Content Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2: E-COMMERCE - eBay -->
+                <div class="experience-card" data-card="2">
+                    <div class="card-header">
+                        <div class="company-info">
+                            <h3>E-COMMERCE</h3>
+                            <div class="position">EBAY VIRTUAL ASSISTANT</div>
+                        </div>
+                        <div class="date-badge">02/2026 - Current</div>
+                    </div>
+                    
+                    <!-- Tags OUTSIDE (visible when collapsed) -->
+                    <div class="tags-row">
+                        <span class="tag">eBay Management</span>
+                        <span class="tag">Product Listing</span>
+                        <span class="tag">Order Fulfillment</span>
+                        <span class="tag">Inventory Management</span>
+                    </div>
+                    
+                    <button class="expand-btn" onclick="toggleExpand(2)">
+                        Click to expand
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="expanded-content" id="expanded-2">
+                        <!-- Intro Text INSIDE (visible when expanded) -->
+                        <div class="intro-text">
+                            Managed and optimized eBay store operations, improving product visibility and order fulfillment efficiency. 
+                            Delivered consistent sales growth through performance-driven marketplace strategies.
+                        </div>
+                        
+                        <div class="expanded-section">
+                            <h4>Key Contributions:</h4>
+                            <ul class="key-contributions">
+                                <li>Optimized product listings improving search ranking and visibility</li>
+                                <li>Managed order processing and customer support operations</li>
+                                <li>Maintained inventory records avoiding order cancellations</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skills-section">
+                            <h4>Skills:</h4>
+                            <div class="skills-tags">
+                                <span class="tag">Customer Service</span>
+                                <span class="tag">Market Analysis</span>
+                                <span class="tag">Performance Tracking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3: E-COMMERCE - Daraz -->
+                <div class="experience-card" data-card="3">
+                    <div class="card-header">
+                        <div class="company-info">
+                            <h3>E-COMMERCE</h3>
+                            <div class="position">DARAZ SELLER</div>
+                        </div>
+                        <div class="date-badge">2024</div>
+                    </div>
+                    
+                    <!-- Tags OUTSIDE (visible when collapsed) -->
+                    <div class="tags-row">
+                        <span class="tag">Daraz Platform</span>
+                        <span class="tag">Product Sourcing</span>
+                        <span class="tag">Customer Service</span>
+                        <span class="tag">Sales Monitoring</span>
+                    </div>
+                    
+                    <button class="expand-btn" onclick="toggleExpand(3)">
+                        Click to expand
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="expanded-content" id="expanded-3">
+                        <!-- Intro Text INSIDE (visible when expanded) -->
+                        <div class="intro-text">
+                            Worked as Daraz seller managing end-to-end store operations including product sourcing, 
+                            listing creation, pricing, and order fulfillment. Maintained positive seller ratings.
+                        </div>
+                        
+                        <div class="expanded-section">
+                            <h4>Key Contributions:</h4>
+                            <ul class="key-contributions">
+                                <li>Managed complete Daraz store operations and product listings</li>
+                                <li>Handled customer inquiries ensuring timely deliveries</li>
+                                <li>Monitored inventory and sales for consistent store growth</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skills-section">
+                            <h4>Skills:</h4>
+                            <div class="skills-tags">
+                                <span class="tag">Product Research</span>
+                                <span class="tag">Pricing Strategy</span>
+                                <span class="tag">Seller Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 4: INTERNSHIP -->
+                <div class="experience-card" data-card="4">
+                    <div class="card-header">
+                        <div class="company-info">
+                            <h3>INTERNSHIP</h3>
+                            <div class="position">GRAPHIC DESIGNER FOR PERSONAL BRANDING</div>
+                        </div>
+                        <div class="date-badge">10/2025</div>
+                    </div>
+                    
+                    <!-- Tags OUTSIDE (visible when collapsed) -->
+                    <div class="tags-row">
+                        <span class="tag">Canva Pro</span>
+                        <span class="tag">Adobe Photoshop</span>
+                        <span class="tag">Color Theory</span>
+                        <span class="tag">Typography</span>
+                    </div>
+                    
+                    <button class="expand-btn" onclick="toggleExpand(4)">
+                        Click to expand
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="expanded-content" id="expanded-4">
+                        <!-- Intro Text INSIDE (visible when expanded) -->
+                        <div class="intro-text">
+                            Completed internship at Next Gen Digital University focused on graphic designing for personal branding. 
+                            Created social media visuals and improved design skills.
+                        </div>
+                        
+                        <div class="expanded-section">
+                            <h4>Key Contributions:</h4>
+                            <ul class="key-contributions">
+                                <li>Designed social media posts for personal branding content</li>
+                                <li>Practiced layout design and typography principles</li>
+                                <li>Improved visual consistency across platforms</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skills-section">
+                            <h4>Skills:</h4>
+                            <div class="skills-tags">
+                                <span class="tag">Layout Design</span>
+                                <span class="tag">Visual Branding</span>
+                                <span class="tag">Social Media Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
     <section id="certifications">
         <div class="container">
             <h2>Certifications</h2>
@@ -2366,6 +2840,43 @@
                 });
             });
         }
+
+        // Experience Section Functions
+        function toggleExpand(cardNumber) {
+            const expandedContent = document.getElementById(`expanded-${cardNumber}`);
+            const expandBtn = document.querySelector(`[data-card="${cardNumber}"] .expand-btn`);
+            
+            expandedContent.classList.toggle('show');
+            expandBtn.classList.toggle('expanded');
+            
+            // Update button text
+            if (expandedContent.classList.contains('show')) {
+                expandBtn.innerHTML = 'Click to close <i class="fas fa-chevron-up"></i>';
+            } else {
+                expandBtn.innerHTML = 'Click to expand <i class="fas fa-chevron-down"></i>';
+            }
+            
+            // Close other expanded cards
+            document.querySelectorAll('.expanded-content.show').forEach(content => {
+                if (content.id !== `expanded-${cardNumber}`) {
+                    const otherCardNum = content.id.split('-')[1];
+                    const otherBtn = document.querySelector(`[data-card="${otherCardNum}"] .expand-btn`);
+                    content.classList.remove('show');
+                    otherBtn.classList.remove('expanded');
+                    otherBtn.innerHTML = 'Click to expand <i class="fas fa-chevron-down"></i>';
+                }
+            });
+        }
+
+        // Click on experience card to expand
+        document.querySelectorAll('.experience-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (!e.target.closest('.expand-btn') && !e.target.closest('.tag')) {
+                    const cardNum = card.dataset.card;
+                    toggleExpand(cardNum);
+                }
+            });
+        });
 
         // Initialize everything
         document.addEventListener('DOMContentLoaded', () => {
