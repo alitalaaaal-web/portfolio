@@ -152,7 +152,7 @@
 
         /* ===== SECTION PADDING REDUCED ===== */
         section {
-            padding: 60px 0; /* Reduced from 100px */
+            padding: 60px 0;
             position: relative;
             z-index: 1;
         }
@@ -169,7 +169,7 @@
 
         h2 {
             font-size: 2.5rem;
-            margin-bottom: 2rem; /* Reduced from 3rem */
+            margin-bottom: 2rem;
             text-align: center;
             position: relative;
         }
@@ -279,8 +279,8 @@
 
         /* ===== HERO SECTION - PADDING REDUCED ===== */
         #hero {
-            padding-top: 120px; /* Reduced from 150px */
-            min-height: 90vh;   /* Reduced from 100vh */
+            padding-top: 120px;
+            min-height: 90vh;
             display: flex;
             align-items: center;
             background: linear-gradient(to bottom, rgba(2, 6, 23, 0.7), rgba(2, 6, 23, 0.7));
@@ -319,7 +319,7 @@
         .hero-text p {
             font-size: 1.1rem;
             color: var(--gray);
-            margin-bottom: 2rem; /* Reduced from 2.5rem */
+            margin-bottom: 2rem;
             max-width: 600px;
             opacity: 0;
             animation: fadeInUp 1s 0.9s forwards;
@@ -365,19 +365,19 @@
         /* ===== CREATIVE DNA - PADDING REDUCED ===== */
         #creative-dna {
             background: rgba(2, 6, 23, 0.7);
-            padding: 70px 0; /* Reduced from 100px 0 */
+            padding: 70px 0;
         }
 
         .dna-video-wrapper {
             display: flex;
             gap: 40px;
             align-items: flex-start;
-            margin-bottom: 40px; /* Reduced from 60px */
+            margin-bottom: 40px;
         }
 
         .tech-dna-header {
             text-align: left;
-            margin-bottom: 40px; /* Reduced from 60px */
+            margin-bottom: 40px;
         }
 
         .tech-dna-header h2 {
@@ -668,22 +668,22 @@
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px; /* Reduced from 50px */
+            gap: 40px;
             align-items: center;
         }
 
         .about-text h3 {
             font-size: 2rem;
-            margin-bottom: 1.2rem; /* Reduced from 1.5rem */
+            margin-bottom: 1.2rem;
             color: var(--primary);
         }
 
         .skills {
-            margin-top: 1.5rem; /* Reduced from 2rem */
+            margin-top: 1.5rem;
         }
 
         .skill-item {
-            margin-bottom: 1.2rem; /* Reduced from 1.5rem */
+            margin-bottom: 1.2rem;
         }
 
         .skill-name {
@@ -712,6 +712,308 @@
             transform: scaleX(1);
         }
 
+        /* ===== CERTIFICATIONS SECTION ===== */
+        #certifications {
+            background: rgba(2, 6, 23, 0.7);
+            padding: 60px 0;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        /* Loop Container with Edge Shadows */
+        .cert-loop-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin: 0 auto;
+            overflow: hidden;
+            mask-image: linear-gradient(
+                to right,
+                transparent 0%,
+                black 10%,
+                black 90%,
+                transparent 100%
+            );
+        }
+
+        /* Edge Shadows */
+        .edge-shadow {
+            position: absolute;
+            top: 0;
+            width: 150px;
+            height: 100%;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .left-shadow {
+            left: 0;
+            background: linear-gradient(to right, rgba(2, 6, 23, 0.9), transparent);
+        }
+
+        .right-shadow {
+            right: 0;
+            background: linear-gradient(to left, rgba(2, 6, 23, 0.9), transparent);
+        }
+
+        /* Carousel Track */
+        .cert-carousel-track {
+            display: flex;
+            position: absolute;
+            left: 0;
+            gap: 20px;
+            height: 100%;
+            will-change: transform;
+            animation: slideLoop 40s linear infinite;
+        }
+
+        .cert-carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes slideLoop {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-280px * 5));
+            }
+        }
+
+        /* Square Box Design */
+        .cert-box {
+            background: rgba(15, 23, 42, 0.9);
+            border-radius: 12px;
+            padding: 25px;
+            width: 260px;
+            height: 260px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+
+        /* Square box glow effect */
+        .cert-box::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--primary));
+            z-index: -1;
+            border-radius: 14px;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .cert-box:hover {
+            transform: translateY(-10px) scale(1.05);
+            border-color: var(--primary);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.5),
+                0 0 30px rgba(16, 185, 129, 0.3);
+        }
+
+        .cert-box:hover::before {
+            opacity: 1;
+            animation: rotateBorder 3s linear infinite;
+        }
+
+        @keyframes rotateBorder {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        /* Square Box Content */
+        .box-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .cert-icon {
+            font-size: 2.8rem;
+            color: var(--primary);
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+
+        .cert-title {
+            font-size: 1.1rem;
+            color: var(--light);
+            font-weight: 600;
+            line-height: 1.4;
+            flex: 1;
+        }
+
+        .cert-year {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            align-self: flex-start;
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.2);
+        }
+
+        .box-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .cert-provider {
+            color: var(--gray);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .view-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            font-size: 0.95rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .view-btn:hover {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        /* Certificate Modal */
+        .cert-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cert-modal.active {
+            display: flex;
+            animation: modalFadeIn 0.4s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .cert-modal-content {
+            background: linear-gradient(145deg, var(--dark), var(--darker));
+            border-radius: 20px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 85vh;
+            overflow: hidden;
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(16, 185, 129, 0.2);
+            position: relative;
+            border: 2px solid var(--primary);
+        }
+
+        .cert-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 30px;
+            background: rgba(15, 23, 42, 0.9);
+            border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .cert-modal-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--light);
+        }
+
+        .cert-close-btn {
+            background: none;
+            border: none;
+            color: var(--gray);
+            font-size: 2rem;
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .cert-close-btn:hover {
+            color: var(--primary);
+            background: rgba(16, 185, 129, 0.1);
+            transform: rotate(90deg);
+        }
+
+        .cert-modal-body {
+            padding: 30px;
+            overflow-y: auto;
+            max-height: calc(85vh - 90px);
+        }
+
+        .certificate-full-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            display: block;
+            margin: 0 auto;
+        }
+
         /* ===== CONTACT SECTION ===== */
         #contact {
             background: rgba(2, 6, 23, 0.7);
@@ -720,24 +1022,24 @@
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px; /* Reduced from 50px */
+            gap: 40px;
         }
 
         .contact-info h3 {
             font-size: 1.8rem;
-            margin-bottom: 1.2rem; /* Reduced from 1.5rem */
+            margin-bottom: 1.2rem;
             color: var(--primary);
         }
 
         .contact-details {
-            margin-top: 1.5rem; /* Reduced from 2rem */
+            margin-top: 1.5rem;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
             gap: 15px;
-            margin-bottom: 1.2rem; /* Reduced from 1.5rem */
+            margin-bottom: 1.2rem;
             opacity: 0;
             transform: translateX(-20px);
             transition: all 0.5s ease;
@@ -765,7 +1067,7 @@
         .contact-form textarea {
             width: 100%;
             padding: 15px;
-            margin-bottom: 15px; /* Reduced from 20px */
+            margin-bottom: 15px;
             border: 1px solid rgba(148, 163, 184, 0.3);
             border-radius: 8px;
             font-size: 1rem;
@@ -782,7 +1084,7 @@
         }
 
         .contact-form textarea {
-            height: 130px; /* Reduced from 150px */
+            height: 130px;
             resize: vertical;
             min-height: 100px;
         }
@@ -791,7 +1093,7 @@
         footer {
             background: rgba(2, 6, 23, 0.7);
             color: white;
-            padding: 40px 0 20px; /* Reduced from 60px 0 30px */
+            padding: 40px 0 20px;
             border-top: 1px solid rgba(148, 163, 184, 0.1);
         }
 
@@ -799,7 +1101,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px; /* Reduced from 40px */
+            margin-bottom: 30px;
             flex-wrap: wrap;
             gap: 20px;
         }
@@ -830,7 +1132,7 @@
 
         .copyright {
             text-align: center;
-            padding-top: 25px; /* Reduced from 30px */
+            padding-top: 25px;
             border-top: 1px solid rgba(148, 163, 184, 0.2);
             color: var(--gray);
         }
@@ -896,7 +1198,7 @@
             
             .dna-container {
                 max-width: 100%;
-                margin-bottom: 30px; /* Reduced from 40px */
+                margin-bottom: 30px;
             }
             
             .video-container {
@@ -950,7 +1252,7 @@
         
             /* MOBILE HERO FIX */
             #hero {
-                padding-top: 100px; /* Further reduced for mobile */
+                padding-top: 100px;
             }
             
             #hero .hero-content {
@@ -958,7 +1260,7 @@
             }
             #hero .hero-image {
                 order: 1 !important;
-                margin-bottom: 20px; /* Reduced from 30px */
+                margin-bottom: 20px;
             }
             #hero .hero-text {
                 order: 2 !important;
@@ -1001,27 +1303,58 @@
                 min-height: 28px;
             }
             
+            /* MOBILE CERTIFICATIONS */
+            .cert-loop-container {
+                height: 250px;
+            }
+            
+            .cert-box {
+                width: 220px;
+                height: 220px;
+                padding: 20px;
+            }
+            
+            .cert-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 2.2rem;
+            }
+            
+            .cert-title {
+                font-size: 1rem;
+            }
+            
+            @keyframes slideLoop {
+                100% {
+                    transform: translateX(calc(-240px * 5));
+                }
+            }
+            
+            .edge-shadow {
+                width: 80px;
+            }
+            
             .about-content,
             .contact-container {
                 grid-template-columns: 1fr;
-                gap: 30px; /* Reduced for mobile */
+                gap: 30px;
             }
             
             h2 {
-                margin-bottom: 1.5rem; /* Reduced for mobile */
+                margin-bottom: 1.5rem;
             }
         }
 
         @media (max-width: 480px) {
             section { 
-                padding: 30px 0; /* Further reduced */
+                padding: 30px 0;
             }
             
             h1 { font-size: 2.5rem; }
             h2 { font-size: 2rem; }
             
             .hero-content {
-                gap: 20px; /* Reduced from 30px */
+                gap: 20px;
             }
             
             .profile-img {
@@ -1069,6 +1402,47 @@
                 padding: 6px 8px;
                 font-size: 0.5rem;
             }
+            
+            /* MOBILE CERTIFICATIONS */
+            .cert-loop-container {
+                height: 220px;
+            }
+            
+            .cert-box {
+                width: 200px;
+                height: 200px;
+                padding: 15px;
+            }
+            
+            .cert-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.8rem;
+            }
+            
+            .cert-title {
+                font-size: 0.9rem;
+            }
+            
+            .cert-year {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+            }
+            
+            @keyframes slideLoop {
+                100% {
+                    transform: translateX(calc(-220px * 5));
+                }
+            }
+            
+            .edge-shadow {
+                width: 60px;
+            }
+            
+            .section-subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 30px;
+            }
         }
     </style>
 </head>
@@ -1091,6 +1465,7 @@
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#creative-dna">Creative DNA</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             
@@ -1103,6 +1478,7 @@
             <a href="#hero">Home</a>
             <a href="#creative-dna">Creative DNA</a>
             <a href="#about">About</a>
+            <a href="#certifications">Certifications</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -1127,7 +1503,7 @@
         </div>
     </section>
 
-    <!-- NEW Creative DNA Section with Horizontal Layout -->
+    <!-- Creative DNA Section -->
     <section id="creative-dna">
         <div class="container">
             <div class="tech-dna-header">
@@ -1140,8 +1516,6 @@
                 <!-- DNA Container (Left Side) -->
                 <div class="dna-container-wrapper">
                     <div class="dna-container" id="dna-grid-container">
-                        <!-- HEADING REMOVED - JO HATANA THA -->
-                        
                         <div class="dna-categories">
                             <!-- Marketing -->
                             <div class="dna-category">
@@ -1221,7 +1595,7 @@
         </div>
     </section>
 
-    <!-- About section -->
+    <!-- About Section -->
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
@@ -1286,6 +1660,36 @@
     <p>• High-retention short-form edits (Reels / TikTok / Shorts)<p>
         <p> • Scroll-stopping ad creatives for better CTR & conversions<p>
             <p> • Clean edits + motion graphics using Premiere Pro & After Effects<p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <p class="section-subtitle">Click on any certificate to view details • Hover to pause scroll</p>
+            
+            <div class="cert-loop-container">
+                <div class="edge-shadow left-shadow"></div>
+                <div class="edge-shadow right-shadow"></div>
+                
+                <div class="cert-carousel-track" id="certCarouselTrack">
+                    <!-- Certificates will be dynamically added -->
+                </div>
+            </div>
+            
+            <!-- Certificate Modal -->
+            <div class="cert-modal" id="certModal">
+                <div class="cert-modal-content">
+                    <div class="cert-modal-header">
+                        <div class="cert-modal-title" id="certModalTitle">Certificate Title</div>
+                        <button class="cert-close-btn" id="certCloseModal">&times;</button>
+                    </div>
+                    <div class="cert-modal-body">
+                        <img src="" alt="Certificate" class="certificate-full-image" id="certificateFullImage">
+                    </div>
                 </div>
             </div>
         </div>
@@ -1750,6 +2154,149 @@
             }
         }
 
+        // CERTIFICATIONS FUNCTIONALITY
+        const certificationsData = [
+            {
+                id: 1,
+                title: "Digital Marketing Certificate",
+                provider: "Google Digital Garage",
+                year: "2024",
+                imageUrl: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                icon: "fas fa-bullhorn"
+            },
+            {
+                id: 2,
+                title: "Advanced Digital Marketing",
+                provider: "Meta Blueprint",
+                year: "2024",
+                imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                icon: "fas fa-chart-line"
+            },
+            {
+                id: 3,
+                title: "eBay Seller Certificate",
+                provider: "eBay Academy",
+                year: "2023",
+                imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                icon: "fas fa-shopping-cart"
+            },
+            {
+                id: 4,
+                title: "Video Editing Certificate",
+                provider: "Adobe Creative Cloud",
+                year: "2023",
+                imageUrl: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                icon: "fas fa-video"
+            },
+            {
+                id: 5,
+                title: "Graphic Designing Certificate",
+                provider: "Adobe Certified Professional",
+                year: "2023",
+                imageUrl: "https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+                icon: "fas fa-paint-brush"
+            }
+        ];
+
+        // Initialize Certifications
+        function initializeCertifications() {
+            const certCarouselTrack = document.getElementById('certCarouselTrack');
+            const certModal = document.getElementById('certModal');
+            const certCloseModal = document.getElementById('certCloseModal');
+            const certificateFullImage = document.getElementById('certificateFullImage');
+            const certModalTitle = document.getElementById('certModalTitle');
+
+            // Function to render certifications
+            function renderCertifications() {
+                certCarouselTrack.innerHTML = '';
+                
+                // Create two sets for seamless loop
+                const doubleCertifications = [...certificationsData, ...certificationsData];
+                
+                doubleCertifications.forEach((cert, index) => {
+                    const certBox = document.createElement('div');
+                    certBox.className = 'cert-box';
+                    certBox.setAttribute('data-id', cert.id);
+                    
+                    certBox.innerHTML = `
+                        <div>
+                            <div class="box-header">
+                                <div class="cert-icon">
+                                    <i class="${cert.icon}"></i>
+                                </div>
+                                <h3 class="cert-title">${cert.title}</h3>
+                            </div>
+                            <div class="cert-year">${cert.year}</div>
+                        </div>
+                        <div class="box-footer">
+                            <div class="cert-provider">
+                                <i class="fas fa-building"></i>
+                                ${cert.provider}
+                            </div>
+                            <button class="view-btn">
+                                <i class="fas fa-external-link-alt"></i> View Certificate
+                            </button>
+                        </div>
+                    `;
+                    
+                    // Add click event
+                    certBox.addEventListener('click', () => openCertificateModal(cert));
+                    
+                    certCarouselTrack.appendChild(certBox);
+                });
+            }
+
+            // Function to open certificate modal
+            function openCertificateModal(cert) {
+                certificateFullImage.src = cert.imageUrl;
+                certificateFullImage.alt = cert.title;
+                certModalTitle.textContent = cert.title;
+                certModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                // Pause carousel when modal is open
+                certCarouselTrack.style.animationPlayState = 'paused';
+            }
+
+            // Function to close certificate modal
+            function closeCertificateModal() {
+                certModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                
+                // Resume carousel
+                certCarouselTrack.style.animationPlayState = 'running';
+            }
+
+            // Event listeners
+            certCloseModal.addEventListener('click', closeCertificateModal);
+            
+            // Close modal when clicking outside
+            certModal.addEventListener('click', (e) => {
+                if (e.target === certModal) {
+                    closeCertificateModal();
+                }
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && certModal.classList.contains('active')) {
+                    closeCertificateModal();
+                }
+            });
+            
+            // Hover effect for carousel
+            certCarouselTrack.addEventListener('mouseenter', () => {
+                certCarouselTrack.style.animationPlayState = 'paused';
+            });
+            
+            certCarouselTrack.addEventListener('mouseleave', () => {
+                certCarouselTrack.style.animationPlayState = 'running';
+            });
+            
+            // Initialize
+            renderCertifications();
+        }
+
         // Mobile Menu Toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const mobileMenu = document.querySelector('.mobile-menu');
@@ -1776,7 +2323,7 @@
             });
         }
 
-        // Initialize
+        // Initialize everything
         document.addEventListener('DOMContentLoaded', () => {
             createEnhancedStars();
             createParticles();
@@ -1820,6 +2367,9 @@
 
             // Make TechDNA globally accessible
             window.techDNA = new TechDNA();
+            
+            // Initialize Certifications
+            initializeCertifications();
         });
 
         // Handle image loading errors
