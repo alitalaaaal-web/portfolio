@@ -427,14 +427,37 @@
         /* Desktop DNA Container - 16:9 Ratio */
         @media (min-width: 769px) {
             .dna-container {
+                width: 700px;
+                height: 470px;
                 aspect-ratio: 1.78/1;
-                max-width: 500px;
-                width: 500px;
-                height: 500px;
+                max-width: 600px;
             }
-           .dna-video-wrapper{
-            width: 500px;
-           }
+            
+            /* DNA aur Video ko align karo */
+            .dna-video-wrapper {
+                align-items: center; /* ✅ FIXED */
+                justify-content: center;
+                height: 470px;
+            }
+            
+            .video-container-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .video-container {
+                width: 376px;
+                height: 470px;
+                max-width: 500px;
+            }
+            
+            .video-player {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+            }
         }
 
         /* Mobile DNA Container - Fixed Size */
@@ -574,16 +597,20 @@
 
         /* Video Container - 4:5 Ratio */
         .video-container-wrapper {
-            width: 400px;
-            height: 400px;
-       
+            flex: 1;
+            min-width: 0;
         }
 
         .video-container {
-            position: center;
-            box-shadow: #020617;
-            width: 400px;
-            height: 500px;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            border: none;
+            background: transparent;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            aspect-ratio: 4/5;
+            max-width: 500px;
+            height: auto;
         }
 
         .video-player {
@@ -1165,29 +1192,41 @@
         }
 
         /* ===== RESPONSIVE DESIGN ===== */
-        @media (max-width: 1200px) {
+        /* ✅ ADDED ALL DEVICE PX BREAKPOINTS */
+        
+        /* Extra Large Desktop (1400px+) */
+        @media (min-width: 1400px) {
+            .container {
+                max-width: 1400px;
+            }
+            
+            .dna-video-wrapper {
+                justify-content: center;
+            }
+        }
+        
+        /* Large Desktop/Laptop (1200px - 1399px) */
+        @media (max-width: 1399px) and (min-width: 1200px) {
             .dna-video-wrapper {
                 gap: 30px;
             }
             
             .dna-container {
-                padding: 20px;
+                width: 650px;
+                height: 440px;
             }
             
-            .skills-grid {
-                grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-                gap: 5px;
-            }
-            
-            .dna-bubble {
-                font-size: 0.7rem;
-                padding: 5px 7px;
+            .video-container {
+                width: 352px;
+                height: 440px;
             }
         }
 
-        @media (max-width: 992px) {
+        /* Desktop/Laptop (992px - 1199px) */
+        @media (max-width: 1199px) and (min-width: 992px) {
             .dna-video-wrapper {
                 flex-direction: column;
+                align-items: center;
             }
             
             .dna-container-wrapper,
@@ -1197,16 +1236,40 @@
             
             .dna-container {
                 max-width: 100%;
+                width: 100%;
+                height: 500px;
                 margin-bottom: 30px;
             }
             
             .video-container {
-                max-width: 100%;
+                max-width: 400px;
+                height: 500px;
+                margin: 0 auto;
             }
         }
 
+        /* Tablet Landscape (769px - 991px) */
+        @media (max-width: 991px) and (min-width: 769px) {
+            .dna-container {
+                width: 100%;
+                max-width: 700px;
+                height: 470px;
+                margin: 0 auto 30px;
+            }
+            
+            .video-container {
+                width: 376px;
+                height: 470px;
+                margin: 0 auto;
+            }
+            
+            .dna-video-wrapper {
+                flex-direction: column;
+            }
+        }
+
+        /* Mobile (481px - 768px) - Most smartphones */
         @media (max-width: 768px) {
-            /* SECTION PADDING REDUCED FOR MOBILE */
             section {
                 padding: 40px 0;
             }
@@ -1344,6 +1407,7 @@
             }
         }
 
+        /* Small Mobile (321px - 480px) */
         @media (max-width: 480px) {
             section { 
                 padding: 30px 0;
@@ -1441,6 +1505,43 @@
             .section-subtitle {
                 font-size: 0.95rem;
                 margin-bottom: 30px;
+            }
+        }
+
+        /* Extra Small Mobile (320px and below) */
+        @media (max-width: 320px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+            
+            .profile-img {
+                width: 250px;
+                height: 320px;
+            }
+            
+            .dna-container {
+                width: 300px;
+                height: 400px;
+                padding: 12px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .cert-box {
+                width: 180px;
+                height: 180px;
+                padding: 12px;
+            }
+            
+            .cert-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.5rem;
+            }
+            
+            .cert-title {
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -1639,26 +1740,24 @@
                 
                 <div class="about-text">
                     <h3>𝗠𝗲𝘁𝗮 & 𝗚𝗼𝗼𝗴𝗹𝗲 𝗔𝗱𝘀</h3>
-                        
-                        <p>• Meta Ads campaign setup, management & scaling
-                          <p> • Audience targeting, retargeting & funnel strategy<p>
-                           <p>• Budget optimization & ROAS improvement<p>
-                        <p> • Performance tracking, reporting & optimization<p>
-                            <h3>𝗘-𝗰𝗼𝗺𝗺𝗲𝗿𝗰𝗲 𝗠𝗮𝗿𝗸𝗲𝘁𝗶𝗻𝗴 (𝗦𝗵𝗼𝗽𝗶𝗳𝘆 + 𝗲𝗕𝗮𝘆)</h3>
-                            <p>
- • Store setup & onboarding support
-<p>
-                                <p>• Product research & competitor analysis<p>
-                                    <p>• Listing optimization<p>
-                                        <p> • Pricing strategy + sales boost planning<p>
-                                            <p> • Policy/defect issue handling & account health improvement<p>
-                                                <p>• Order workflow improvement + store performance monitoring<p>
-                                                    <p>• Customer experience strategies to maintain strong seller metrics
-<p>
-    <h3>𝗩𝗶𝗱𝗲𝗼 𝗘𝗱𝗶𝘁𝗶𝗻𝗴</h3>
-    <p>• High-retention short-form edits (Reels / TikTok / Shorts)<p>
-        <p> • Scroll-stopping ad creatives for better CTR & conversions<p>
-            <p> • Clean edits + motion graphics using Premiere Pro & After Effects<p>
+                    <p>• Meta Ads campaign setup, management & scaling</p>
+                    <p>• Audience targeting, retargeting & funnel strategy</p>
+                    <p>• Budget optimization & ROAS improvement</p>
+                    <p>• Performance tracking, reporting & optimization</p>
+                    
+                    <h3>𝗘-𝗰𝗼𝗺𝗺𝗲𝗿𝗰𝗲 𝗠𝗮𝗿𝗸𝗲𝘁𝗶𝗻𝗴 (𝗦𝗵𝗼𝗽𝗶𝗳𝘆 + 𝗲𝗕𝗮𝘆)</h3>
+                    <p>• Store setup & onboarding support</p>
+                    <p>• Product research & competitor analysis</p>
+                    <p>• Listing optimization</p>
+                    <p>• Pricing strategy + sales boost planning</p>
+                    <p>• Policy/defect issue handling & account health improvement</p>
+                    <p>• Order workflow improvement + store performance monitoring</p>
+                    <p>• Customer experience strategies to maintain strong seller metrics</p>
+                    
+                    <h3>𝗩𝗶𝗱𝗲𝗼 𝗘𝗱𝗶𝘁𝗶𝗻𝗴</h3>
+                    <p>• High-retention short-form edits (Reels / TikTok / Shorts)</p>
+                    <p>• Scroll-stopping ad creatives for better CTR & conversions</p>
+                    <p>• Clean edits + motion graphics using Premiere Pro & After Effects</p>
                 </div>
             </div>
         </div>
