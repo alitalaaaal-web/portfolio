@@ -428,10 +428,13 @@
         @media (min-width: 769px) {
             .dna-container {
                 aspect-ratio: 1.78/1;
-                max-width: 600px;
-                width: 700px;
-                height: 470px;
+                max-width: 500px;
+                width: 500px;
+                height: 500px;
             }
+           .dna-video-wrapper{
+            width: 500px;
+           }
         }
 
         /* Mobile DNA Container - Fixed Size */
@@ -571,20 +574,16 @@
 
         /* Video Container - 4:5 Ratio */
         .video-container-wrapper {
-            flex: 1;
-            min-width: 0;
+            width: 400px;
+            height: 400px;
+       
         }
 
         .video-container {
-            width: 100%;
-            border-radius: 15px;
-            overflow: hidden;
-            border: none;
-            background: transparent;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            aspect-ratio: 4/5;
-            max-width: 500px;
-            height: auto;
+            position: center;
+            box-shadow: #020617;
+            width: 400px;
+            height: 500px;
         }
 
         .video-player {
