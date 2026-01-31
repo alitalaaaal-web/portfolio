@@ -143,7 +143,7 @@
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
             position: relative;
@@ -372,7 +372,7 @@
             display: flex;
             gap: 40px;
             align-items: flex-start;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
         }
 
         .tech-dna-header {
@@ -422,52 +422,22 @@
             animation: fadeInUp 0.8s ease 0.4s both;
             display: flex;
             flex-direction: column;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        /* Desktop DNA Container - 16:9 Ratio */
+        /* Desktop DNA Container */
         @media (min-width: 769px) {
             .dna-container {
-                width: 700px;
-                height: 470px;
-                aspect-ratio: 1.78/1;
-                max-width: 600px;
-            }
-            
-            /* DNA aur Video ko align karo */
-            .dna-video-wrapper {
-                align-items: center; /* ✅ FIXED */
-                justify-content: center;
-                height: 470px;
-            }
-            
-            .video-container-wrapper {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .video-container {
-                width: 376px;
-                height: 470px;
-                max-width: 500px;
-            }
-            
-            .video-player {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 15px;
+                height: 500px;
             }
         }
 
         /* Mobile DNA Container - Fixed Size */
         @media (max-width: 768px) {
             .dna-container {
-                aspect-ratio: auto;
-                width: 350px;
                 height: 450px;
-                margin: 0 auto;
-                max-width: 100%;
             }
         }
 
@@ -595,22 +565,22 @@
             50% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.5); }
         }
 
-        /* Video Container - 4:5 Ratio */
+        /* Video Container */
         .video-container-wrapper {
             flex: 1;
             min-width: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
         }
 
         .video-container {
             width: 100%;
+            max-width: 500px;
+            height: 500px;
             border-radius: 15px;
             overflow: hidden;
-            border: none;
-            background: transparent;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            aspect-ratio: 4/5;
-            max-width: 500px;
-            height: auto;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .video-player {
@@ -1192,88 +1162,62 @@
         }
 
         /* ===== RESPONSIVE DESIGN ===== */
-        /* ✅ ADDED ALL DEVICE PX BREAKPOINTS */
-        
-        /* Extra Large Desktop (1400px+) */
-        @media (min-width: 1400px) {
-            .container {
-                max-width: 1400px;
-            }
-            
+        @media (max-width: 1200px) {
             .dna-video-wrapper {
-                justify-content: center;
-            }
-        }
-        
-        /* Large Desktop/Laptop (1200px - 1399px) */
-        @media (max-width: 1399px) and (min-width: 1200px) {
-            .dna-video-wrapper {
-                gap: 30px;
+                gap: 50px;
             }
             
             .dna-container {
-                width: 650px;
-                height: 440px;
+                padding: 20px;
             }
             
-            .video-container {
-                width: 352px;
-                height: 440px;
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+                gap: 5px;
+            }
+            
+            .dna-bubble {
+                font-size: 0.7rem;
+                padding: 5px 7px;
             }
         }
 
-        /* Desktop/Laptop (992px - 1199px) */
-        @media (max-width: 1199px) and (min-width: 992px) {
+        @media (max-width: 992px) {
             .dna-video-wrapper {
                 flex-direction: column;
                 align-items: center;
+                gap: 30px;
             }
             
             .dna-container-wrapper,
             .video-container-wrapper {
                 width: 100%;
-            }
-            
-            .dna-container {
-                max-width: 100%;
-                width: 100%;
-                height: 500px;
-                margin-bottom: 30px;
+                max-width: 600px;
             }
             
             .video-container {
-                max-width: 400px;
-                height: 500px;
+                max-width: 500px;
+                height: 400px;
+                margin: 0 auto;
+            }
+            
+            .tech-dna-header h2 {
+                text-align: center;
+            }
+            
+            .tech-dna-header h2:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .tech-dna-header p {
+                text-align: center;
                 margin: 0 auto;
             }
         }
 
-        /* Tablet Landscape (769px - 991px) */
-        @media (max-width: 991px) and (min-width: 769px) {
-            .dna-container {
-                width: 100%;
-                max-width: 700px;
-                height: 470px;
-                margin: 0 auto 30px;
-            }
-            
-            .video-container {
-                width: 376px;
-                height: 470px;
-                margin: 0 auto;
-            }
-            
-            .dna-video-wrapper {
-                flex-direction: column;
-            }
-        }
-
-        /* Mobile (481px - 768px) - Most smartphones */
         @media (max-width: 768px) {
-            section {
-                padding: 40px 0;
-            }
-            
+            /* MOBILE NAVIGATION */
             .nav-links {
                 display: none;
             }
@@ -1311,58 +1255,70 @@
                 color: var(--primary);
                 background: rgba(16, 185, 129, 0.1);
             }
-        
+            
             /* MOBILE HERO FIX */
             #hero {
                 padding-top: 100px;
+                min-height: auto;
             }
             
-            #hero .hero-content {
-                flex-direction: column !important;
-            }
-            #hero .hero-image {
-                order: 1 !important;
-                margin-bottom: 20px;
-            }
-            #hero .hero-text {
-                order: 2 !important;
-            }
-            
-            /* MOBILE DNA */
-            .tech-dna-header h2 {
-                font-size: 2.5rem;
+            .hero-content {
+                flex-direction: column-reverse;
                 text-align: center;
+                gap: 30px;
             }
             
-            .tech-dna-header h2:after {
-                left: 50%;
-                transform: translateX(-50%);
+            .hero-text h1 {
+                font-size: 2.8rem;
+                background: linear-gradient(135deg, var(--primary), var(--secondary));
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
             }
             
-            .tech-dna-header p {
-                text-align: center;
+            .hero-text .subtitle {
+                font-size: 1.5rem;
             }
             
-            .dna-container {
-                padding: 15px;
-                width: 350px;
-                height: 450px;
+            .hero-text p {
+                margin: 0 auto 2rem;
+            }
+            
+            .hero-btns {
+                justify-content: center;
+            }
+            
+            .profile-img {
+                width: 280px;
+                height: 350px;
                 margin: 0 auto;
             }
             
-            .category-title {
-                font-size: 0.85rem;
+            /* MOBILE DNA CONTAINER */
+            .dna-container {
+                padding: 15px;
+                height: 450px;
             }
             
             .skills-grid {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap: 5px;
+            }
+            
+            .category-title {
+                font-size: 0.8rem;
             }
             
             .dna-bubble {
                 font-size: 0.65rem;
                 padding: 4px 6px;
                 min-height: 28px;
+            }
+            
+            /* MOBILE VIDEO CONTAINER */
+            .video-container {
+                height: 350px;
+                max-width: 100%;
             }
             
             /* MOBILE CERTIFICATIONS */
@@ -1396,77 +1352,87 @@
                 width: 80px;
             }
             
-            .about-content,
+            /* MOBILE ABOUT SECTION */
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .about-text h3 {
+                font-size: 1.5rem;
+            }
+            
+            /* MOBILE CONTACT SECTION */
             .contact-container {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
             
-            h2 {
+            /* GENERAL MOBILE ADJUSTMENTS */
+            section { 
+                padding: 40px 0;
+            }
+            
+            h2 { 
+                font-size: 2rem; 
                 margin-bottom: 1.5rem;
             }
         }
 
-        /* Small Mobile (321px - 480px) */
         @media (max-width: 480px) {
             section { 
                 padding: 30px 0;
             }
             
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
+            h1 { 
+                font-size: 2.2rem; 
+            }
             
-            .hero-content {
-                gap: 20px;
+            h2 { 
+                font-size: 1.8rem; 
+            }
+            
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-text .subtitle {
+                font-size: 1.2rem;
             }
             
             .profile-img {
-                width: 280px;
-                height: 350px;
+                width: 250px;
+                height: 300px;
             }
             
-            .tech-dna-header h2 {
-                font-size: 2rem;
-            }
-            
+            /* SMALL MOBILE DNA */
             .dna-container {
-                width: 100%;
-                max-width: 350px;
-                height: 450px;
+                height: 400px;
+                padding: 12px;
             }
             
             .skills-grid {
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap: 4px;
             }
             
             .dna-bubble {
-                font-size: 0.6rem;
-                padding: 3px 5px;
-                min-height: 26px;
-            }
-            
-            .dna-bubble.short-text {
-                padding: 3px 5px;
-                font-size: 0.65rem;
-            }
-            
-            .dna-bubble.medium-text {
-                padding: 4px 6px;
-                font-size: 0.6rem;
-            }
-            
-            .dna-bubble.long-text {
-                padding: 5px 7px;
                 font-size: 0.55rem;
+                padding: 3px 5px;
+                min-height: 24px;
             }
             
-            .dna-bubble.very-long-text {
-                padding: 6px 8px;
-                font-size: 0.5rem;
+            .category-title {
+                font-size: 0.75rem;
+                margin-bottom: 6px;
             }
             
-            /* MOBILE CERTIFICATIONS */
+            /* SMALL MOBILE VIDEO */
+            .video-container {
+                height: 300px;
+            }
+            
+            /* SMALL MOBILE CERTIFICATIONS */
             .cert-loop-container {
                 height: 220px;
             }
@@ -1506,42 +1472,22 @@
                 font-size: 0.95rem;
                 margin-bottom: 30px;
             }
-        }
-
-        /* Extra Small Mobile (320px and below) */
-        @media (max-width: 320px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.8rem; }
             
-            .profile-img {
-                width: 250px;
-                height: 320px;
+            /* SMALL MOBILE BUTTONS */
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
             }
             
-            .dna-container {
-                width: 300px;
-                height: 400px;
-                padding: 12px;
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
             }
             
-            .skills-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .cert-box {
-                width: 180px;
-                height: 180px;
-                padding: 12px;
-            }
-            
-            .cert-icon {
-                width: 45px;
-                height: 45px;
-                font-size: 1.5rem;
-            }
-            
-            .cert-title {
-                font-size: 0.85rem;
+            .hero-btns .btn {
+                width: 100%;
+                max-width: 250px;
             }
         }
     </style>
@@ -1588,7 +1534,7 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <h1>Ali Talal</h1>
-                <div class="subtitle">Digital Marketer || Video Editor </div>
+                <div class="subtitle">Digital Marketer || Video Editor</div>
                 <p>I'm a Digital Marketing Strategist working with enthusiasm. I'm also a Content Creator, providing informative videos on marketing and eCommerce tips and consultancy services. Alongside this, I work as a Video Editor and continue my journey as a student, learning and growing in the field.</p>
                 
                 <div class="hero-btns">
